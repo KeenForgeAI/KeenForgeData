@@ -23,11 +23,13 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 
 ### 📦 Published datasets
 
+<!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
 | **GC10-DET-corrected** | 🏭 Industrial — steel surface | 2,280 | 3,542 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/GC10-DET-corrected) |
 | **TXL-PBC-corrected** | 🩸 Medical — hematology | 1,256 | 18,098 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TXL-PBC-corrected) |
 | **raccoon-corrected** | 🦝 Wildlife | 193 | 211 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/raccoon-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/raccoon-corrected) |
+<!-- GEN:TABLE_END -->
 
 ### 🔗 All links
 
@@ -41,9 +43,11 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 
 Direct dataset links:
 
+<!-- GEN:LINKS -->
 - **GC10-DET-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/GC10-DET-corrected)
 - **TXL-PBC-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TXL-PBC-corrected)
 - **raccoon-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/raccoon-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/raccoon-corrected)
+<!-- GEN:LINKS_END -->
 
 ### 🧹 What "corrected" means
 
@@ -62,22 +66,19 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 
 ### 📚 Dataset details
 
+<!-- GEN:DETAILS -->
 #### 🏭 GC10-DET-corrected — 2,280 images · 3,542 boxes
-Hot-rolled steel strip surface defects, 10 classes, Pascal VOC annotations.
-Cleaned version of [GC10-DET](https://github.com/lvxiaoming2019/GC10-DET-Metallic-Surface-Defect-Datasets):
-13 duplicate images removed, 26 un-annotated images removed, and 132 annotation files with
-wrong class names fixed (`10_yaozhed` → `10_yaozhe`, one garbage label `d` → `1_chongkong`).
+
+Hot-rolled steel strip surface defects, 10 classes, Pascal VOC annotations. Cleaned version of [GC10-DET](https://github.com/lvxiaoming2019/GC10-DET-Metallic-Surface-Defect-Datasets): 13 duplicate images removed, 26 un-annotated images removed, and 132 annotation files with wrong class names fixed (`10_yaozhed` → `10_yaozhe`, one garbage label `d` → `1_chongkong`).
 
 #### 🩸 TXL-PBC-corrected — 1,256 images · 18,098 boxes
-Peripheral blood cell detection (WBC / RBC / Platelets), 3 classes, YOLO format.
-Corrected version of the **TXL-PBC** dataset (Gan, Li & Wang, *Scientific Data* 12:1694, 2025,
-[doi:10.1038/s41597-025-05980-z](https://doi.org/10.1038/s41597-025-05980-z)):
-4 duplicate images removed, labels and README corrected.
+
+Peripheral blood cell detection (WBC / RBC / Platelets), 3 classes, YOLO format. Corrected version of the **TXL-PBC** dataset (Gan, Li & Wang, *Scientific Data* 12:1694, 2025, [doi:10.1038/s41597-025-05980-z](https://doi.org/10.1038/s41597-025-05980-z)): 4 duplicate images removed, labels and README corrected.
 
 #### 🦝 raccoon-corrected — 193 images · 211 boxes
-The classic Raccoon detection dataset, fully re-annotated: boxes tightened
-(average IoU 0.810 against the original), mislabels fixed, 7 duplicate images removed,
-missed instances added.
+
+The classic Raccoon detection dataset, fully re-annotated. Boxes tightened (average IoU 0.810 against the original), mislabels fixed, 7 duplicate images removed, missed instances added.
+<!-- GEN:DETAILS_END -->
 
 ### ⚖️ License & attribution
 
