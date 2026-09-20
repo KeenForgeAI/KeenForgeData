@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: >-
+  If you use any of the datasets curated here, please cite BOTH the original
+  dataset (or its paper) AND the corrected release you actually used — they are
+  not identical, so a citation to the original alone does not describe the data.
+title: "KeenForgeData — curated niche vision datasets"
+type: dataset
+authors:
+  - name: "KeenForgeAI"
+    website: "https://huggingface.co/KeenForgeAI"
+repository-code: "https://github.com/KeenForgeAI/KeenForgeData"
+url: "https://github.com/KeenForgeAI/KeenForgeData"
+repository-artifact: "https://huggingface.co/KeenForgeAI"
+abstract: >-
+  A curated collection of high-quality niche computer-vision datasets, published
+  openly on Hugging Face and ModelScope. Public niche datasets are frequently
+  noisy — loose boxes, missed objects, mislabels, duplicated images, inconsistent
+  class names. KeenForgeAI re-annotates and cleans them with KeenForge, documents
+  every change, and releases them with full provenance and citations.
+keywords:
+  - computer vision
+  - object detection
+  - niche datasets
+  - industrial inspection
+  - medical imaging
+  - annotation quality
+  - dataset curation
+license: CC-BY-4.0
+version: 1.0.0
+date-released: "2026-09-20"
