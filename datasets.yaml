@@ -27,6 +27,24 @@ org:
 # Newest first. The order here is the order shown everywhere.
 datasets:
 
+  - id: NEU-DET-corrected
+    emoji: "🔩"
+    domain_en: "Industrial — steel surface"
+    domain_zh: "工业 — 钢材表面"
+    domain_short: "Industrial (steel)"
+    images: 1799
+    boxes: 4183
+    classes: 6
+    format: "Pascal VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected
+    description_en: "Hot-rolled steel strip surface defects, 6 classes (VOC + YOLO) — cleaned version of the NEU Surface Defect Database"
+    description_zh: "热轧带钢表面缺陷，6 类（VOC + YOLO）—— NEU 表面缺陷数据库的清理修正版"
+    blurb_en: "Hot-rolled steel strip surface defects, 6 classes, Pascal VOC + YOLO annotations."
+    blurb_zh: "热轧带钢表面缺陷，6 类，Pascal VOC + YOLO 格式。"
+    summary_en: "Cleaned version of the **NEU Surface Defect Database (NEU-DET)** (He et al., *IEEE TIM* 69(4):1493-1504, 2020, [doi:10.1109/TIM.2019.2915404](https://doi.org/10.1109/TIM.2019.2915404)): 1 duplicate image and 3 duplicate boxes removed, a reproducible 80/10/10 split added, and the data re-packaged in both Pascal VOC and YOLO format. Structural clean-up only — no re-annotation."
+    summary_zh: "**NEU 表面缺陷数据库（NEU-DET）** 的清理修正版（He et al., *IEEE TIM* 69(4):1493-1504, 2020）：删除 1 张重复图片与 3 个重复框，补充可复现的 80/10/10 划分，并以 Pascal VOC + YOLO 双格式重新打包。仅做结构化清理，未重新标注。"
+
   - id: GC10-DET-corrected
     emoji: "🏭"
     domain_en: "Industrial — steel surface"
