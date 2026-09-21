@@ -32,18 +32,19 @@ datasets:
     domain_en: "Industrial — steel surface"
     domain_zh: "工业 — 钢材表面"
     domain_short: "Industrial (steel)"
-    images: 1799
-    boxes: 4183
+    images: 1797
+    boxes: 4177
     classes: 6
     format: "Pascal VOC + YOLO"
     hf: https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected
     ms: https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected
+    doi: 10.57967/hf/10536
     description_en: "Hot-rolled steel strip surface defects, 6 classes (VOC + YOLO) — cleaned version of the NEU Surface Defect Database"
     description_zh: "热轧带钢表面缺陷，6 类（VOC + YOLO）—— NEU 表面缺陷数据库的清理修正版"
     blurb_en: "Hot-rolled steel strip surface defects, 6 classes, Pascal VOC + YOLO annotations."
     blurb_zh: "热轧带钢表面缺陷，6 类，Pascal VOC + YOLO 格式。"
-    summary_en: "Cleaned version of the **NEU Surface Defect Database (NEU-DET)** (He et al., *IEEE TIM* 69(4):1493-1504, 2020, [doi:10.1109/TIM.2019.2915404](https://doi.org/10.1109/TIM.2019.2915404)): 1 duplicate image and 3 duplicate boxes removed, a reproducible 80/10/10 split added, and the data re-packaged in both Pascal VOC and YOLO format. Structural clean-up only — no re-annotation."
-    summary_zh: "**NEU 表面缺陷数据库（NEU-DET）** 的清理修正版（He et al., *IEEE TIM* 69(4):1493-1504, 2020）：删除 1 张重复图片与 3 个重复框，补充可复现的 80/10/10 划分，并以 Pascal VOC + YOLO 双格式重新打包。仅做结构化清理，未重新标注。"
+    summary_en: "Cleaned version of the **NEU Surface Defect Database (NEU-DET)** (He et al., *IEEE TIM* 69(4):1493-1504, 2020, [doi:10.1109/TIM.2019.2915404](https://doi.org/10.1109/TIM.2019.2915404)): 3 duplicate images (1 exact, 2 near-duplicates under rotation / shift) and 3 duplicate boxes removed, a reproducible 80/10/10 split added, and the data re-packaged in both Pascal VOC and YOLO format. Structural clean-up only — no re-annotation."
+    summary_zh: "**NEU 表面缺陷数据库（NEU-DET）** 的清理修正版（He et al., *IEEE TIM* 69(4):1493-1504, 2020）：删除 3 张重复图片（1 张完全重复 + 2 张旋转/平移近似重复）与 3 个重复框，补充可复现的 80/10/10 划分，并以 Pascal VOC + YOLO 双格式重新打包。仅做结构化清理，未重新标注。"
 
   - id: GC10-DET-corrected
     emoji: "🏭"
@@ -56,6 +57,7 @@ datasets:
     format: "Pascal VOC"
     hf: https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected
     ms: https://www.modelscope.ai/datasets/KeenForgeAI/GC10-DET-corrected
+    doi: 10.57967/hf/10526
     description_en: "Hot-rolled steel strip surface defects, 10 classes (Pascal VOC) — cleaned version of GC10-DET"
     description_zh: "热轧钢板表面缺陷，10 类（Pascal VOC）—— GC10-DET 的清理修正版"
     blurb_en: "Hot-rolled steel strip surface defects, 10 classes, Pascal VOC annotations."
@@ -74,6 +76,7 @@ datasets:
     format: "YOLO"
     hf: https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected
     ms: https://www.modelscope.ai/datasets/KeenForgeAI/TXL-PBC-corrected
+    doi: 10.57967/hf/10527
     description_en: "Peripheral blood cell detection (WBC / RBC / Platelets) — corrected version of TXL-PBC"
     description_zh: "外周血细胞检测（白细胞 / 红细胞 / 血小板）—— TXL-PBC 的修正版"
     blurb_en: "Peripheral blood cell detection (WBC / RBC / Platelets), 3 classes, YOLO format."
@@ -92,6 +95,7 @@ datasets:
     format: "YOLO"
     hf: https://huggingface.co/datasets/KeenForgeAI/raccoon-corrected
     ms: https://www.modelscope.ai/datasets/KeenForgeAI/raccoon-corrected
+    doi: 10.57967/hf/10528
     description_en: "Fully re-annotated version of the classic Raccoon detection dataset"
     description_zh: "经典浣熊检测数据集的完全重标版"
     blurb_en: "The classic Raccoon detection dataset, fully re-annotated."

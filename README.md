@@ -26,7 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
-| **NEU-DET-corrected** | 🔩 Industrial — steel surface | 1,799 | 4,183 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected) |
+| **NEU-DET-corrected** | 🔩 Industrial — steel surface | 1,797 | 4,177 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected) |
 | **GC10-DET-corrected** | 🏭 Industrial — steel surface | 2,280 | 3,542 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/GC10-DET-corrected) |
 | **TXL-PBC-corrected** | 🩸 Medical — hematology | 1,256 | 18,098 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TXL-PBC-corrected) |
 | **raccoon-corrected** | 🦝 Wildlife | 193 | 211 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/raccoon-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/raccoon-corrected) |
@@ -45,10 +45,10 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
-- **NEU-DET-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected)
-- **GC10-DET-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/GC10-DET-corrected)
-- **TXL-PBC-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TXL-PBC-corrected)
-- **raccoon-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/raccoon-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/raccoon-corrected)
+- **NEU-DET-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected) · [DOI](https://doi.org/10.57967/hf/10536)
+- **GC10-DET-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/GC10-DET-corrected) · [DOI](https://doi.org/10.57967/hf/10526)
+- **TXL-PBC-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TXL-PBC-corrected) · [DOI](https://doi.org/10.57967/hf/10527)
+- **raccoon-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/raccoon-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/raccoon-corrected) · [DOI](https://doi.org/10.57967/hf/10528)
 <!-- GEN:LINKS_END -->
 
 ### 🧹 What "corrected" means
@@ -69,19 +69,27 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
-#### 🔩 NEU-DET-corrected — 1,799 images · 4,183 boxes
+#### 🔩 NEU-DET-corrected — 1,797 images · 4,177 boxes
 
-Hot-rolled steel strip surface defects, 6 classes, Pascal VOC + YOLO annotations. Cleaned version of the **NEU Surface Defect Database (NEU-DET)** (He et al., *IEEE TIM* 69(4):1493-1504, 2020, [doi:10.1109/TIM.2019.2915404](https://doi.org/10.1109/TIM.2019.2915404)): 1 duplicate image and 3 duplicate boxes removed, a reproducible 80/10/10 split added, and the data re-packaged in both Pascal VOC and YOLO format. Structural clean-up only — no re-annotation.
+DOI: [10.57967/hf/10536](https://doi.org/10.57967/hf/10536)
+
+Hot-rolled steel strip surface defects, 6 classes, Pascal VOC + YOLO annotations. Cleaned version of the **NEU Surface Defect Database (NEU-DET)** (He et al., *IEEE TIM* 69(4):1493-1504, 2020, [doi:10.1109/TIM.2019.2915404](https://doi.org/10.1109/TIM.2019.2915404)): 3 duplicate images (1 exact, 2 near-duplicates under rotation / shift) and 3 duplicate boxes removed, a reproducible 80/10/10 split added, and the data re-packaged in both Pascal VOC and YOLO format. Structural clean-up only — no re-annotation.
 
 #### 🏭 GC10-DET-corrected — 2,280 images · 3,542 boxes
+
+DOI: [10.57967/hf/10526](https://doi.org/10.57967/hf/10526)
 
 Hot-rolled steel strip surface defects, 10 classes, Pascal VOC annotations. Cleaned version of [GC10-DET](https://github.com/lvxiaoming2019/GC10-DET-Metallic-Surface-Defect-Datasets): 13 duplicate images removed, 26 un-annotated images removed, and 132 annotation files with wrong class names fixed (`10_yaozhed` → `10_yaozhe`, one garbage label `d` → `1_chongkong`).
 
 #### 🩸 TXL-PBC-corrected — 1,256 images · 18,098 boxes
 
+DOI: [10.57967/hf/10527](https://doi.org/10.57967/hf/10527)
+
 Peripheral blood cell detection (WBC / RBC / Platelets), 3 classes, YOLO format. Corrected version of the **TXL-PBC** dataset (Gan, Li & Wang, *Scientific Data* 12:1694, 2025, [doi:10.1038/s41597-025-05980-z](https://doi.org/10.1038/s41597-025-05980-z)): 4 duplicate images removed, labels and README corrected.
 
 #### 🦝 raccoon-corrected — 193 images · 211 boxes
+
+DOI: [10.57967/hf/10528](https://doi.org/10.57967/hf/10528)
 
 The classic Raccoon detection dataset, fully re-annotated. Boxes tightened (average IoU 0.810 against the original), mislabels fixed, 7 duplicate images removed, missed instances added.
 <!-- GEN:DETAILS_END -->

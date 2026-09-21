@@ -77,9 +77,13 @@ def block_table(ds):
 
 
 def block_links(ds):
-    return "\n".join(
-        "- **{id}** — [Hugging Face]({hf}) · [ModelScope]({ms})".format(**d)
-        for d in ds)
+    out = []
+    for d in ds:
+        s = "- **{id}** — [Hugging Face]({hf}) · [ModelScope]({ms})".format(**d)
+        if d.get("doi"):
+            s += " · [DOI](https://doi.org/{doi})".format(**d)
+        out.append(s)
+    return "\n".join(out)
 
 
 def block_details(ds):
@@ -87,6 +91,9 @@ def block_details(ds):
     for d in ds:
         parts.append("#### {e} {id} — {img} images · {box} boxes".format(
             e=d["emoji"], id=d["id"], img=n(d["images"]), box=n(d["boxes"])))
+        if d.get("doi"):
+            parts.append("")
+            parts.append("DOI: [{doi}](https://doi.org/{doi})".format(**d))
         parts.append("")
         parts.append("{b} {s}".format(b=d["blurb_en"], s=d["summary_en"]))
         parts.append("")
