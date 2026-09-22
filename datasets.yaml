@@ -26,6 +26,24 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: PKU-Market-PCB-corrected
+    emoji: "🔧"
+    domain_en: "Industrial — PCB"
+    domain_zh: "工业 — PCB"
+    domain_short: "Industrial (PCB)"
+    images: 693
+    boxes: 2953
+    classes: 6
+    format: "COCO + VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/PKU-Market-PCB-corrected
+    description_en: "PCB defect detection, 6 classes (COCO + VOC + YOLO) — cleaned version of PKU-Market-PCB, with a board-disjoint split"
+    description_zh: "PCB 缺陷检测，6 类（COCO + VOC + YOLO）—— PKU-Market-PCB 的清理修正版，含底板不重叠划分"
+    blurb_en: "PCB defect detection, 6 classes, COCO + Pascal VOC + YOLO annotations, board-disjoint split."
+    blurb_zh: "PCB 缺陷检测，6 类，COCO + Pascal VOC + YOLO 格式，底板不重叠划分。"
+    summary_en: "Cleaned version of **PKU-Market-PCB** (Huang & Wei, [arXiv:1901.08204](https://arxiv.org/abs/1901.08204), 2019): a stray `data.yaml` was removed; Pascal VOC and YOLO annotations were added; and a **board-disjoint split** (541 / 152) was added because the upstream split places all 10 base boards in both halves (100 % board-level leakage — a model evaluated on it sees boards it has memorized). No bounding box was modified. Upstream licence unstated."
+    summary_zh: "**PKU-Market-PCB** 的清理修正版（Huang & Wei, [arXiv:1901.08204](https://arxiv.org/abs/1901.08204), 2019）：删除了杂项 `data.yaml`；补充 Pascal VOC 与 YOLO 标注；新增**底板不重叠划分**（541 / 152）—— 因为上游划分把 10 块底板全部放进两边（100% 底板级泄漏，模型在验证集上看到的都是背过的板子）。未改动任何标注框。上游未声明许可证。"
+
   - id: DeepPCB-corrected
     emoji: "🔌"
     domain_en: "Industrial — PCB"
