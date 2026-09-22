@@ -68,6 +68,7 @@ We take public niche datasets — **industrial / manufacturing**, **medical & mi
 <!-- GEN:CARD_TABLE -->
 | Dataset | Domain | Size | Description |
 |---|---|---|---|
+| [`DeepPCB-corrected`](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected) | 🔌 Industrial (PCB) | 1,499 images · 10,004 boxes | PCB defect detection, 6 classes (TXT + VOC + YOLO) — cleaned version of DeepPCB (1,499 template/tested image pairs) |
 | [`NEU-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) | 🔩 Industrial (steel) | 1,797 images · 4,177 boxes | Hot-rolled steel strip surface defects, 6 classes (VOC + YOLO) — cleaned version of the NEU Surface Defect Database |
 | [`GC10-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected) | 🏭 Industrial (steel) | 2,280 images · 3,542 boxes | Hot-rolled steel strip surface defects, 10 classes (Pascal VOC) — cleaned version of GC10-DET |
 | [`TXL-PBC-corrected`](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected) | 🩸 Medical (hematology) | 1,256 images · 18,098 boxes | Peripheral blood cell detection (WBC / RBC / Platelets) — corrected version of TXL-PBC |
@@ -135,7 +136,7 @@ AI 在后台自动训练。**数据全程不离开你的电脑。**
 4. **开源发布**到 **Hugging Face** 与 **ModelScope**
 
 <!-- GEN:CARD_ZH -->
-**已发布数据集**：🔩 [`NEU-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected)（工业 — 钢材表面，1,797 张 / 4,177 框）、🏭 [`GC10-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected)（工业 — 钢板表面，2,280 张 / 3,542 框）、🩸 [`TXL-PBC-corrected`](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected)（医疗 — 血液学，1,256 张 / 18,098 框）、🦝 [`raccoon-corrected`](https://huggingface.co/datasets/KeenForgeAI/raccoon-corrected)（野生动物，193 张 / 211 框）
+**已发布数据集**：🔌 [`DeepPCB-corrected`](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected)（工业 — PCB，1,499 张 / 10,004 框）、🔩 [`NEU-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected)（工业 — 钢材表面，1,797 张 / 4,177 框）、🏭 [`GC10-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected)（工业 — 钢板表面，2,280 张 / 3,542 框）、🩸 [`TXL-PBC-corrected`](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected)（医疗 — 血液学，1,256 张 / 18,098 框）、🦝 [`raccoon-corrected`](https://huggingface.co/datasets/KeenForgeAI/raccoon-corrected)（野生动物，193 张 / 211 框）
 <!-- GEN:CARD_ZH_END -->
 
 ### 💡 我们的理念

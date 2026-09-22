@@ -26,6 +26,24 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: DeepPCB-corrected
+    emoji: "🔌"
+    domain_en: "Industrial — PCB"
+    domain_zh: "工业 — PCB"
+    domain_short: "Industrial (PCB)"
+    images: 1499
+    boxes: 10004
+    classes: 6
+    format: "TXT + VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/DeepPCB-corrected
+    description_en: "PCB defect detection, 6 classes (TXT + VOC + YOLO) — cleaned version of DeepPCB (1,499 template/tested image pairs)"
+    description_zh: "PCB 缺陷检测，6 类（TXT + VOC + YOLO）—— DeepPCB 的清理修正版（1,499 对模板/缺陷图）"
+    blurb_en: "PCB defect detection, 6 classes, with defect-free template pairs. TXT + Pascal VOC + YOLO annotations."
+    blurb_zh: "PCB 缺陷检测，6 类，含无缺陷模板配对。TXT + Pascal VOC + YOLO 格式。"
+    summary_en: "Cleaned version of **DeepPCB** (Tang et al., [arXiv:1902.06197](https://arxiv.org/abs/1902.06197)): the upstream split lists referenced files that do not exist (all 1,500 image paths broken) and are rewritten here; 1 image with annotations burned into its pixels and 1 orphan template were removed; 61 RGB-mode images were normalised to grayscale (content unchanged); Pascal VOC and YOLO annotations added. MIT licensed."
+    summary_zh: "**DeepPCB** 的清理修正版（Tang 等，[arXiv:1902.06197](https://arxiv.org/abs/1902.06197)）：上游划分列表引用了不存在的文件（1,500 条图片路径全部失效），本版重写为可解析路径；删除了 1 张把标注烧进像素的图与 1 张孤立模板；61 张 RGB 图归一为灰度（内容不变）；补充 Pascal VOC 与 YOLO 标注。MIT 许可。"
+
 
   - id: NEU-DET-corrected
     emoji: "🔩"

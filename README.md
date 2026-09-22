@@ -26,6 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
+| **DeepPCB-corrected** | 🔌 Industrial — PCB | 1,499 | 10,004 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DeepPCB-corrected) |
 | **NEU-DET-corrected** | 🔩 Industrial — steel surface | 1,797 | 4,177 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected) |
 | **GC10-DET-corrected** | 🏭 Industrial — steel surface | 2,280 | 3,542 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/GC10-DET-corrected) |
 | **TXL-PBC-corrected** | 🩸 Medical — hematology | 1,256 | 18,098 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TXL-PBC-corrected) |
@@ -45,6 +46,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
+- **DeepPCB-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DeepPCB-corrected)
 - **NEU-DET-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected) · [DOI](https://doi.org/10.57967/hf/10536)
 - **GC10-DET-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/GC10-DET-corrected) · [DOI](https://doi.org/10.57967/hf/10526)
 - **TXL-PBC-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TXL-PBC-corrected) · [DOI](https://doi.org/10.57967/hf/10527)
@@ -69,6 +71,10 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
+#### 🔌 DeepPCB-corrected — 1,499 images · 10,004 boxes
+
+PCB defect detection, 6 classes, with defect-free template pairs. TXT + Pascal VOC + YOLO annotations. Cleaned version of **DeepPCB** (Tang et al., [arXiv:1902.06197](https://arxiv.org/abs/1902.06197)): the upstream split lists referenced files that do not exist (all 1,500 image paths broken) and are rewritten here; 1 image with annotations burned into its pixels and 1 orphan template were removed; 61 RGB-mode images were normalised to grayscale (content unchanged); Pascal VOC and YOLO annotations added. MIT licensed.
+
 #### 🔩 NEU-DET-corrected — 1,797 images · 4,177 boxes
 
 DOI: [10.57967/hf/10536](https://doi.org/10.57967/hf/10536)
