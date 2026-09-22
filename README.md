@@ -47,8 +47,8 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
-- **PKU-Market-PCB-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PKU-Market-PCB-corrected)
-- **DeepPCB-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DeepPCB-corrected)
+- **PKU-Market-PCB-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PKU-Market-PCB-corrected) · [DOI](https://doi.org/10.57967/hf/10554)
+- **DeepPCB-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DeepPCB-corrected) · [DOI](https://doi.org/10.57967/hf/10551)
 - **NEU-DET-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected) · [DOI](https://doi.org/10.57967/hf/10536)
 - **GC10-DET-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/GC10-DET-corrected) · [DOI](https://doi.org/10.57967/hf/10526)
 - **TXL-PBC-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TXL-PBC-corrected) · [DOI](https://doi.org/10.57967/hf/10527)
@@ -75,9 +75,13 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 <!-- GEN:DETAILS -->
 #### 🔧 PKU-Market-PCB-corrected — 693 images · 2,953 boxes
 
+DOI: [10.57967/hf/10554](https://doi.org/10.57967/hf/10554)
+
 PCB defect detection, 6 classes, COCO + Pascal VOC + YOLO annotations, board-disjoint split. Cleaned version of **PKU-Market-PCB** (Huang & Wei, [arXiv:1901.08204](https://arxiv.org/abs/1901.08204), 2019): a stray `data.yaml` was removed; Pascal VOC and YOLO annotations were added; and a **board-disjoint split** (541 / 152) was added because the upstream split places all 10 base boards in both halves (100 % board-level leakage — a model evaluated on it sees boards it has memorized). No bounding box was modified. Upstream licence unstated.
 
 #### 🔌 DeepPCB-corrected — 1,499 images · 10,004 boxes
+
+DOI: [10.57967/hf/10551](https://doi.org/10.57967/hf/10551)
 
 PCB defect detection, 6 classes, with defect-free template pairs. TXT + Pascal VOC + YOLO annotations. Cleaned version of **DeepPCB** (Tang et al., [arXiv:1902.06197](https://arxiv.org/abs/1902.06197)): the upstream split lists referenced files that do not exist (all 1,500 image paths broken) and are rewritten here; 1 image with annotations burned into its pixels and 1 orphan template were removed; 61 RGB-mode images were normalised to grayscale (content unchanged); Pascal VOC and YOLO annotations added. MIT licensed.
 

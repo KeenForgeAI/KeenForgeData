@@ -37,6 +37,7 @@ datasets:
     format: "COCO + VOC + YOLO"
     hf: https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected
     ms: https://www.modelscope.ai/datasets/KeenForgeAI/PKU-Market-PCB-corrected
+    doi: 10.57967/hf/10554
     description_en: "PCB defect detection, 6 classes (COCO + VOC + YOLO) — cleaned version of PKU-Market-PCB, with a board-disjoint split"
     description_zh: "PCB 缺陷检测，6 类（COCO + VOC + YOLO）—— PKU-Market-PCB 的清理修正版，含底板不重叠划分"
     blurb_en: "PCB defect detection, 6 classes, COCO + Pascal VOC + YOLO annotations, board-disjoint split."
@@ -55,6 +56,7 @@ datasets:
     format: "TXT + VOC + YOLO"
     hf: https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected
     ms: https://www.modelscope.ai/datasets/KeenForgeAI/DeepPCB-corrected
+    doi: 10.57967/hf/10551
     description_en: "PCB defect detection, 6 classes (TXT + VOC + YOLO) — cleaned version of DeepPCB (1,499 template/tested image pairs)"
     description_zh: "PCB 缺陷检测，6 类（TXT + VOC + YOLO）—— DeepPCB 的清理修正版（1,499 对模板/缺陷图）"
     blurb_en: "PCB defect detection, 6 classes, with defect-free template pairs. TXT + Pascal VOC + YOLO annotations."
