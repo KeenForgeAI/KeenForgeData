@@ -37,6 +37,7 @@ datasets:
     format: "Pascal VOC + YOLO"
     hf: https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected
     ms: https://www.modelscope.ai/datasets/KeenForgeAI/MagneticTile-corrected
+    doi: 10.57967/hf/10659
     description_en: "Magnetic tile surface defects, 5 classes (VOC + YOLO) — bounding-box standardized version of the Magnetic Tile Surface Defect Dataset"
     description_zh: "磁瓦表面缺陷，5 类（VOC + YOLO）—— 磁瓦表面缺陷数据集的目标检测框规整版"
     blurb_en: "Magnetic tile surface defects, 5 classes, Pascal VOC + YOLO annotations, with burst-shot duplicates removed."

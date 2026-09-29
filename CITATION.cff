@@ -32,6 +32,21 @@ date-released: "2026-09-20"
 references:
   - type: dataset
     title: >-
+      MagneticTile-corrected: a cleaned and bounding-box standardized release of
+      the Magnetic Tile Surface Defect dataset
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    doi: "10.57967/hf/10659"
+    notes: >-
+      Derived from Huang et al. (2018), arXiv:1805.01168. CC BY 4.0. Curated by
+      Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
       GC10-DET-corrected: a cleaned release of the GC10-DET steel surface defect
       dataset
     authors:
