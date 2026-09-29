@@ -26,6 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
+| **MagneticTile-corrected** | 🧲 Industrial — magnetic tile | 1,318 | 437 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/MagneticTile-corrected) |
 | **PKU-Market-PCB-corrected** | 🔧 Industrial — PCB | 693 | 2,953 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PKU-Market-PCB-corrected) |
 | **DeepPCB-corrected** | 🔌 Industrial — PCB | 1,499 | 10,004 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DeepPCB-corrected) |
 | **NEU-DET-corrected** | 🔩 Industrial — steel surface | 1,797 | 4,177 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected) |
@@ -47,6 +48,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
+- **MagneticTile-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/MagneticTile-corrected)
 - **PKU-Market-PCB-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PKU-Market-PCB-corrected) · [DOI](https://doi.org/10.57967/hf/10554)
 - **DeepPCB-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DeepPCB-corrected) · [DOI](https://doi.org/10.57967/hf/10551)
 - **NEU-DET-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/NEU-DET-corrected) · [DOI](https://doi.org/10.57967/hf/10536)
@@ -73,6 +75,10 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
+#### 🧲 MagneticTile-corrected — 1,318 images · 437 boxes
+
+Magnetic tile surface defects, 5 classes, Pascal VOC + YOLO annotations, with burst-shot duplicates removed. Cleaned and bounding-box standardized version of the **Magnetic Tile Surface Defect Dataset** (Huang, Qiu & Yuan, [arXiv:1805.01168](https://arxiv.org/abs/1805.01168), 2018): upstream ships only grayscale saliency masks and **no bounding boxes**, so 437 tight boxes were extracted for the 5 defect classes via adaptive Otsu thresholding; **22 burst-shot near-duplicate frames** were isolated (sub-second industrial camera repeats, MAE 1.64–4.14) to remove train/test leakage; 4 images in `MT_Uneven` carrying 100 % black masks were removed; and a seeded stratified 70/10/20 split was added. CC BY 4.0.
+
 #### 🔧 PKU-Market-PCB-corrected — 693 images · 2,953 boxes
 
 DOI: [10.57967/hf/10554](https://doi.org/10.57967/hf/10554)

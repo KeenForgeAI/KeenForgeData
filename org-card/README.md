@@ -68,6 +68,7 @@ We take public niche datasets — **industrial / manufacturing**, **medical & mi
 <!-- GEN:CARD_TABLE -->
 | Dataset | Domain | Size | Description |
 |---|---|---|---|
+| [`MagneticTile-corrected`](https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected) | 🧲 Industrial (magnetic tile) | 1,318 images · 437 boxes | Magnetic tile surface defects, 5 classes (VOC + YOLO) — bounding-box standardized version of the Magnetic Tile Surface Defect Dataset |
 | [`PKU-Market-PCB-corrected`](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected) | 🔧 Industrial (PCB) | 693 images · 2,953 boxes | PCB defect detection, 6 classes (COCO + VOC + YOLO) — cleaned version of PKU-Market-PCB, with a board-disjoint split |
 | [`DeepPCB-corrected`](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected) | 🔌 Industrial (PCB) | 1,499 images · 10,004 boxes | PCB defect detection, 6 classes (TXT + VOC + YOLO) — cleaned version of DeepPCB (1,499 template/tested image pairs) |
 | [`NEU-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected) | 🔩 Industrial (steel) | 1,797 images · 4,177 boxes | Hot-rolled steel strip surface defects, 6 classes (VOC + YOLO) — cleaned version of the NEU Surface Defect Database |
@@ -137,7 +138,7 @@ AI 在后台自动训练。**数据全程不离开你的电脑。**
 4. **开源发布**到 **Hugging Face** 与 **ModelScope**
 
 <!-- GEN:CARD_ZH -->
-**已发布数据集**：🔧 [`PKU-Market-PCB-corrected`](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected)（工业 — PCB，693 张 / 2,953 框）、🔌 [`DeepPCB-corrected`](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected)（工业 — PCB，1,499 张 / 10,004 框）、🔩 [`NEU-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected)（工业 — 钢材表面，1,797 张 / 4,177 框）、🏭 [`GC10-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected)（工业 — 钢板表面，2,280 张 / 3,542 框）、🩸 [`TXL-PBC-corrected`](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected)（医疗 — 血液学，1,256 张 / 18,098 框）、🦝 [`raccoon-corrected`](https://huggingface.co/datasets/KeenForgeAI/raccoon-corrected)（野生动物，193 张 / 211 框）
+**已发布数据集**：🧲 [`MagneticTile-corrected`](https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected)（工业 — 磁瓦表面，1,318 张 / 437 框）、🔧 [`PKU-Market-PCB-corrected`](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected)（工业 — PCB，693 张 / 2,953 框）、🔌 [`DeepPCB-corrected`](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected)（工业 — PCB，1,499 张 / 10,004 框）、🔩 [`NEU-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/NEU-DET-corrected)（工业 — 钢材表面，1,797 张 / 4,177 框）、🏭 [`GC10-DET-corrected`](https://huggingface.co/datasets/KeenForgeAI/GC10-DET-corrected)（工业 — 钢板表面，2,280 张 / 3,542 框）、🩸 [`TXL-PBC-corrected`](https://huggingface.co/datasets/KeenForgeAI/TXL-PBC-corrected)（医疗 — 血液学，1,256 张 / 18,098 框）、🦝 [`raccoon-corrected`](https://huggingface.co/datasets/KeenForgeAI/raccoon-corrected)（野生动物，193 张 / 211 框）
 <!-- GEN:CARD_ZH_END -->
 
 ### 💡 我们的理念

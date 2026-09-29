@@ -26,6 +26,24 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: MagneticTile-corrected
+    emoji: "🧲"
+    domain_en: "Industrial — magnetic tile"
+    domain_zh: "工业 — 磁瓦表面"
+    domain_short: "Industrial (magnetic tile)"
+    images: 1318
+    boxes: 437
+    classes: 5
+    format: "Pascal VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/MagneticTile-corrected
+    description_en: "Magnetic tile surface defects, 5 classes (VOC + YOLO) — bounding-box standardized version of the Magnetic Tile Surface Defect Dataset"
+    description_zh: "磁瓦表面缺陷，5 类（VOC + YOLO）—— 磁瓦表面缺陷数据集的目标检测框规整版"
+    blurb_en: "Magnetic tile surface defects, 5 classes, Pascal VOC + YOLO annotations, with burst-shot duplicates removed."
+    blurb_zh: "磁瓦表面缺陷，5 类，Pascal VOC + YOLO 格式，已剔除连拍重复帧。"
+    summary_en: "Cleaned and bounding-box standardized version of the **Magnetic Tile Surface Defect Dataset** (Huang, Qiu & Yuan, [arXiv:1805.01168](https://arxiv.org/abs/1805.01168), 2018): upstream ships only grayscale saliency masks and **no bounding boxes**, so 437 tight boxes were extracted for the 5 defect classes via adaptive Otsu thresholding; **22 burst-shot near-duplicate frames** were isolated (sub-second industrial camera repeats, MAE 1.64–4.14) to remove train/test leakage; 4 images in `MT_Uneven` carrying 100 % black masks were removed; and a seeded stratified 70/10/20 split was added. CC BY 4.0."
+    summary_zh: "**磁瓦表面缺陷数据集** 的清理与检测框规整版（Huang 等，[arXiv:1805.01168](https://arxiv.org/abs/1805.01168)，2018）：上游仅提供灰度显著性掩码而**无检测框**，本版通过自适应 Otsu 阈值分割为 5 类缺陷提取出 **437 个紧密 Bounding Box**；隔离 **22 张连拍近似重复帧**（工业相机微秒级连拍，平均像素差 1.64–4.14），消除训练/测试泄漏；剔除 `MT_Uneven` 中 4 张掩码全黑的脏图；并新增带随机种子的 70/10/20 分层划分。CC BY 4.0。"
+
   - id: PKU-Market-PCB-corrected
     emoji: "🔧"
     domain_en: "Industrial — PCB"
