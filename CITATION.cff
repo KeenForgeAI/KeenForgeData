@@ -47,6 +47,51 @@ references:
 
   - type: dataset
     title: >-
+      PKU-Market-PCB-corrected: a cleaned release of the PKU-Market-PCB printed
+      circuit board defect dataset
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    doi: "10.57967/hf/10554"
+    notes: >-
+      Derived from Huang & Wei (2019), arXiv:1901.08204. Upstream licence
+      unstated. Curated by Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
+      DeepPCB-corrected: a cleaned release of the DeepPCB printed circuit board
+      defect dataset
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    doi: "10.57967/hf/10551"
+    notes: >-
+      Derived from Tang et al. (2019), arXiv:1902.06197. MIT licensed. Curated by
+      Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
+      NEU-DET-corrected: a cleaned release of the NEU surface defect database
+      (hot-rolled steel strip)
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    doi: "10.57967/hf/10536"
+    notes: >-
+      Derived from He et al. (2020), doi:10.1109/TIM.2019.2915404. Upstream
+      licence unstated. Curated by Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
       GC10-DET-corrected: a cleaned release of the GC10-DET steel surface defect
       dataset
     authors:
