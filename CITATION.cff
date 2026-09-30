@@ -32,6 +32,21 @@ date-released: "2026-09-20"
 references:
   - type: dataset
     title: >-
+      PlantDoc-corrected: a cleaned release of the PlantDoc plant leaf disease
+      object-detection dataset
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    doi: "10.57967/hf/10678"
+    notes: >-
+      Derived from Singh et al. (2020), doi:10.1145/3371158.3371196. CC BY 4.0.
+      Curated by Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
       PCB_AoI_KubeEdge-corrected: a cleaned release of the KubeEdge-Ianvs PCB-AoI
       printed circuit board defect dataset
     authors:

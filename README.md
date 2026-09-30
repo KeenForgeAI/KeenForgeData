@@ -26,6 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
+| **PlantDoc-corrected** | 🌱 Agriculture — plant disease | 2,565 | 8,887 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PlantDoc-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PlantDoc-corrected) |
 | **PCB_AoI_KubeEdge-corrected** | 🖥️ Industrial — PCB | 233 | 1,011 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) |
 | **MagneticTile-corrected** | 🧲 Industrial — magnetic tile | 1,318 | 437 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/MagneticTile-corrected) |
 | **PKU-Market-PCB-corrected** | 🔧 Industrial — PCB | 693 | 2,953 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PKU-Market-PCB-corrected) |
@@ -49,6 +50,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
+- **PlantDoc-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PlantDoc-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PlantDoc-corrected) · [DOI](https://doi.org/10.57967/hf/10678)
 - **PCB_AoI_KubeEdge-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) · [DOI](https://doi.org/10.57967/hf/10677)
 - **MagneticTile-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/MagneticTile-corrected) · [DOI](https://doi.org/10.57967/hf/10659)
 - **PKU-Market-PCB-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PKU-Market-PCB-corrected) · [DOI](https://doi.org/10.57967/hf/10554)
@@ -77,6 +79,12 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
+#### 🌱 PlantDoc-corrected — 2,565 images · 8,887 boxes
+
+DOI: [10.57967/hf/10678](https://doi.org/10.57967/hf/10678)
+
+Plant leaf disease detection across 13 crops, 29 classes, Pascal VOC + YOLO annotations, with train/test leakage removed. Cleaned version of the **PlantDoc** object-detection dataset (Singh et al., CoDS-COMAD 2020, [doi:10.1145/3371158.3371196](https://doi.org/10.1145/3371158.3371196), CC BY 4.0): **12 images were byte-identical between `TRAIN/` and `TEST/`** — a hard train/test leak — and were removed; 11 images shipped with an **empty XML** (no `<object>`) and 11 more with **no XML at all** were dropped; 4 images downloaded only as low-resolution thumbnails while annotated at original resolution (so their boxes lie outside the frame) were dropped, as was 1 orphan XML; **35 images carried an EXIF orientation tag** while their boxes had been authored against the stored pixel orientation — 30 received a byte-level tag strip (pixels untouched) and 5 had the EXIF rotation baked into the pixels, so the annotation canvas now matches the stored pixels under every loader (PIL, OpenCV, Ultralytics); 4 VOC files declaring `<width>0</width><height>0</height>` were repaired; **all 234 URL-tainted filenames** (`%20`, `+`, `?itok=`, `%253E`, 25 extension-less files and 12 with script extensions such as `.ashx`) were sanitised, and scraped SEO names running up to 215 characters were truncated to ≤80 characters plus an 8-hex-digit hash of the upstream name; all **29 class names** were normalised to Title Case (fixing the `Soyabean` typo); and a reproducible split was added — the official `TEST/` (236) is kept as **test** for paper comparability while a stratified 10 % **val** (233) is carved out of `TRAIN/` (seed 42). **All 8,887 bounding boxes are carried over unchanged** — no coordinate was scaled, shifted or re-guessed.
+
 #### 🖥️ PCB_AoI_KubeEdge-corrected — 233 images · 1,011 boxes
 
 DOI: [10.57967/hf/10677](https://doi.org/10.57967/hf/10677)

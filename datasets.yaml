@@ -26,6 +26,25 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: PlantDoc-corrected
+    emoji: "🌱"
+    domain_en: "Agriculture — plant disease"
+    domain_zh: "农业 — 植物病害"
+    domain_short: "Agriculture (plant disease)"
+    images: 2565
+    boxes: 8887
+    classes: 29
+    format: "Pascal VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/PlantDoc-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/PlantDoc-corrected
+    doi: 10.57967/hf/10678
+    description_en: "Plant leaf disease detection, 29 classes (VOC + YOLO) — cleaned version of PlantDoc with train/test leakage removed and a reproducible split added"
+    description_zh: "植物叶片病害检测，29 类（VOC + YOLO）—— PlantDoc 数据集的清理修正版，已剔除训练/测试泄漏并补上可复现划分"
+    blurb_en: "Plant leaf disease detection across 13 crops, 29 classes, Pascal VOC + YOLO annotations, with train/test leakage removed."
+    blurb_zh: "覆盖 13 种作物的植物叶片病害检测，29 类，Pascal VOC + YOLO 格式，已剔除训练/测试泄漏。"
+    summary_en: "Cleaned version of the **PlantDoc** object-detection dataset (Singh et al., CoDS-COMAD 2020, [doi:10.1145/3371158.3371196](https://doi.org/10.1145/3371158.3371196), CC BY 4.0): **12 images were byte-identical between `TRAIN/` and `TEST/`** — a hard train/test leak — and were removed; 11 images shipped with an **empty XML** (no `<object>`) and 11 more with **no XML at all** were dropped; 4 images downloaded only as low-resolution thumbnails while annotated at original resolution (so their boxes lie outside the frame) were dropped, as was 1 orphan XML; **35 images carried an EXIF orientation tag** while their boxes had been authored against the stored pixel orientation — 30 received a byte-level tag strip (pixels untouched) and 5 had the EXIF rotation baked into the pixels, so the annotation canvas now matches the stored pixels under every loader (PIL, OpenCV, Ultralytics); 4 VOC files declaring `<width>0</width><height>0</height>` were repaired; **all 234 URL-tainted filenames** (`%20`, `+`, `?itok=`, `%253E`, 25 extension-less files and 12 with script extensions such as `.ashx`) were sanitised, and scraped SEO names running up to 215 characters were truncated to ≤80 characters plus an 8-hex-digit hash of the upstream name; all **29 class names** were normalised to Title Case (fixing the `Soyabean` typo); and a reproducible split was added — the official `TEST/` (236) is kept as **test** for paper comparability while a stratified 10 % **val** (233) is carved out of `TRAIN/` (seed 42). **All 8,887 bounding boxes are carried over unchanged** — no coordinate was scaled, shifted or re-guessed."
+    summary_zh: "**PlantDoc** 目标检测数据集的清理修正版（Singh 等，CoDS-COMAD 2020，[doi:10.1145/3371158.3371196](https://doi.org/10.1145/3371158.3371196)，CC BY 4.0）：**12 张图像在 `TRAIN/` 与 `TEST/` 中逐字节相同** —— 属于硬性训练/测试泄漏，已删除；11 张图像携带**空 XML**（无 `<object>`）、另有 11 张**完全没有 XML**，均已剔除；4 张图像只下载到低分辨率缩略图却按原图分辨率标注（标注框落在画布之外）被剔除，另剔除 1 个孤立 XML；**35 张图像带有 EXIF 方向标签**，而其标注框是按**存储像素方向**绘制的 —— 其中 30 张采用字节级剥离方向标签（像素不变），5 张把 EXIF 旋转**烘焙进像素**，从而使无论在哪个框架下读取（PIL、OpenCV、Ultralytics），标注画布都与存储像素方向一致；4 个声明 `<width>0</width><height>0</height>` 的 VOC 文件已修复；**全部 234 个含 URL 污染的文件名**（`%20`、`+`、`?itok=`、`%253E`，其中 25 个无扩展名、12 个带 `.ashx` 等网页脚本扩展名）已净化，上游抓取网页留下的最长 215 字符的 SEO 长文件名统一截断至 ≤80 字符并追加原文件名的 8 位十六进制哈希；**29 个类别名**全部统一为 Title Case（并修正 `Soyabean` 拼写错误）；同时补上可复现划分 —— 官方 `TEST/`（236 张）保留为 **test** 以便与论文对比，并从 `TRAIN/` 中分层切出 10% 作为 **val**（233 张，随机种子 42）。**8,887 个标注框全部原样迁移**，未做任何缩放、平移或重推。"
+
   - id: PCB_AoI_KubeEdge-corrected
     emoji: "🖥️"
     domain_en: "Industrial — PCB"
