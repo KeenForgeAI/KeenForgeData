@@ -26,6 +26,25 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: PCB_AoI_KubeEdge-corrected
+    emoji: "🖥️"
+    domain_en: "Industrial — PCB"
+    domain_zh: "工业 — PCB"
+    domain_short: "Industrial (PCB)"
+    images: 233
+    boxes: 1011
+    classes: 2
+    format: "Pascal VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected
+    doi: 10.57967/hf/10677
+    description_en: "PCB AOI defect detection, 2 classes (VOC + YOLO) — cleaned version of the KubeEdge-Ianvs PCB-AoI dataset, with a training-only augmentation set"
+    description_zh: "PCB AOI 缺陷检测，2 类（VOC + YOLO）—— KubeEdge-Ianvs PCB-AoI 数据集的清理修正版，含仅训练用增强集"
+    blurb_en: "PCB AOI defect detection, 2 classes, Pascal VOC + YOLO annotations, with a de-duplicated training-only augmentation set."
+    blurb_zh: "PCB AOI 缺陷检测，2 类，Pascal VOC + YOLO 格式，含去重后的仅训练用增强集。"
+    summary_en: "Cleaned version of the **PCB-AoI Public Dataset** (KubeEdge-Ianvs, by KubeEdge SIG AI members from China Telecom and Raisecom Technology): the upstream `train_data_augmentation/` silently mixed the 173 original tiles with their geometric transforms — here the originals are dropped (they remain in the core split) and the transforms moved to a dedicated `augmented/` folder, and the 156 transforms derived from val-split tiles were removed so the augmented set can never leak validation content; a seeded, class-stratified train/val/test split (147 / 26 / 60) was added; Pascal VOC + YOLO annotations were provided; and the upstream VOC metadata (bogus `UAV autolanding` folder/source/owner, and `.jpg` names for `.jpeg` files) was fixed. No bounding box was modified. Upstream licence unstated."
+    summary_zh: "**PCB-AoI 公开数据集**的清理修正版（KubeEdge-Ianvs，由中国电信与瑞斯康达的 KubeEdge SIG AI 成员发布）：上游 `train_data_augmentation/` 把 173 张原始图与几何变换图混存 —— 本版删除其中的原始图（核心划分中已保留）、将变换图移入独立的 `augmented/` 目录，并剔除源自 val 集的 156 张变换图，确保增强集绝不泄漏验证集内容；新增带随机种子的 85/15 分层 train/val 划分（147 / 26 / 60）；补充 Pascal VOC + YOLO 标注；并修正上游 VOC 元数据（错误的 `UAV autolanding` folder/source/owner，以及把 `.jpeg` 写成 `.jpg`）。未改动任何标注框。上游未声明许可证。"
+
   - id: MagneticTile-corrected
     emoji: "🧲"
     domain_en: "Industrial — magnetic tile"

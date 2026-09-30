@@ -32,6 +32,22 @@ date-released: "2026-09-20"
 references:
   - type: dataset
     title: >-
+      PCB_AoI_KubeEdge-corrected: a cleaned release of the KubeEdge-Ianvs PCB-AoI
+      printed circuit board defect dataset
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    doi: "10.57967/hf/10677"
+    notes: >-
+      Derived from the KubeEdge-Ianvs PCB-AoI Public Dataset (KubeEdge SIG AI,
+      China Telecom / Raisecom Technology). Upstream licence unstated. Curated by
+      Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
       MagneticTile-corrected: a cleaned and bounding-box standardized release of
       the Magnetic Tile Surface Defect dataset
     authors:

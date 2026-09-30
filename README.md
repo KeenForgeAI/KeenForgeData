@@ -26,6 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
+| **PCB_AoI_KubeEdge-corrected** | 🖥️ Industrial — PCB | 233 | 1,011 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) |
 | **MagneticTile-corrected** | 🧲 Industrial — magnetic tile | 1,318 | 437 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/MagneticTile-corrected) |
 | **PKU-Market-PCB-corrected** | 🔧 Industrial — PCB | 693 | 2,953 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PKU-Market-PCB-corrected) |
 | **DeepPCB-corrected** | 🔌 Industrial — PCB | 1,499 | 10,004 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DeepPCB-corrected) |
@@ -48,6 +49,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
+- **PCB_AoI_KubeEdge-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) · [DOI](https://doi.org/10.57967/hf/10677)
 - **MagneticTile-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/MagneticTile-corrected) · [DOI](https://doi.org/10.57967/hf/10659)
 - **PKU-Market-PCB-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PKU-Market-PCB-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PKU-Market-PCB-corrected) · [DOI](https://doi.org/10.57967/hf/10554)
 - **DeepPCB-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/DeepPCB-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DeepPCB-corrected) · [DOI](https://doi.org/10.57967/hf/10551)
@@ -75,6 +77,12 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
+#### 🖥️ PCB_AoI_KubeEdge-corrected — 233 images · 1,011 boxes
+
+DOI: [10.57967/hf/10677](https://doi.org/10.57967/hf/10677)
+
+PCB AOI defect detection, 2 classes, Pascal VOC + YOLO annotations, with a de-duplicated training-only augmentation set. Cleaned version of the **PCB-AoI Public Dataset** (KubeEdge-Ianvs, by KubeEdge SIG AI members from China Telecom and Raisecom Technology): the upstream `train_data_augmentation/` silently mixed the 173 original tiles with their geometric transforms — here the originals are dropped (they remain in the core split) and the transforms moved to a dedicated `augmented/` folder, and the 156 transforms derived from val-split tiles were removed so the augmented set can never leak validation content; a seeded, class-stratified train/val/test split (147 / 26 / 60) was added; Pascal VOC + YOLO annotations were provided; and the upstream VOC metadata (bogus `UAV autolanding` folder/source/owner, and `.jpg` names for `.jpeg` files) was fixed. No bounding box was modified. Upstream licence unstated.
+
 #### 🧲 MagneticTile-corrected — 1,318 images · 437 boxes
 
 DOI: [10.57967/hf/10659](https://doi.org/10.57967/hf/10659)
