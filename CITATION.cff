@@ -32,6 +32,22 @@ date-released: "2026-09-20"
 references:
   - type: dataset
     title: >-
+      PV_Multi_Defect-corrected: a cleaned release of the PV-Multi-Defect
+      photovoltaic panel defect dataset
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    doi: "10.57967/hf/10882"
+    notes: >-
+      Derived from the PV-Multi-Defect dataset (Li, Wang & Zhang, Electronics
+      2023, doi:10.3390/electronics12030561). Upstream licence unstated. Curated
+      by Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
       DBA_Fire_Smoke-corrected: a cleaned release of the DBA-Fire fire and smoke
       detection dataset
     authors:

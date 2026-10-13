@@ -26,6 +26,25 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: PV_Multi_Defect-corrected
+    emoji: "☀️"
+    domain_en: "Energy — photovoltaic inspection"
+    domain_zh: "能源 — 光伏组件巡检"
+    domain_short: "Energy (PV)"
+    images: 1044
+    boxes: 3403
+    classes: 5
+    format: "Pascal VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/PV_Multi_Defect-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/PV_Multi_Defect-corrected
+    doi: 10.57967/hf/10882
+    description_en: "Photovoltaic (PV) panel multi-defect detection, 5 classes (VOC + YOLO) — cleaned, de-duplicated and split version of the PV-Multi-Defect dataset"
+    description_zh: "光伏组件多缺陷检测，5 类（VOC + YOLO）—— PV-Multi-Defect 数据集的清理、去重与划分版"
+    blurb_en: "Photovoltaic panel multi-defect detection (hot spot / scratch / border / non-electricity / broken), 5 classes, Pascal VOC + YOLO annotations, with a near-duplicate-aware split."
+    blurb_zh: "光伏组件多缺陷检测（亮斑 / 划痕 / 边框 / 无电 / 破损），5 类，Pascal VOC + YOLO 格式，近重复感知划分。"
+    summary_en: "Cleaned, split and standardized version of the **PV-Multi-Defect** photovoltaic panel defect dataset (Li, Wang & Zhang, *Electronics* 2023, DOI 10.3390/electronics12030561; upstream [houhou34/PV-Multi-Defect](https://github.com/houhou34/PV-Multi-Defect); upstream licence unstated): **61 byte-identical duplicate images** (61 pairs) were removed; **2 unannotated images** (`img3059`, `img9513`) and **1 empty annotation** (`img7863`) were dropped; the single near-duplicate cluster (12 perceptually identical images) was grouped so it stays on one side of a seeded, class-stratified **70/15/15** split (upstream had none); the VOC metadata was cleaned (a bogus `<folder>` value `new`/`result2` and a hard-coded personal Windows `<path>` such as `C:\\Users\\86151\\Desktop\\\\...`); and YOLO TXT annotations, `classes.txt`, `data.yaml` and CSVs were generated. **All 3,403 bounding boxes are carried over unchanged** — no coordinate was scaled, shifted or re-guessed. 5 classes: `hot_spot` (1,553), `scratch` (1,349), `black_border` (251), `no_electricity` (158), `broken` (92)."
+    summary_zh: "**PV-Multi-Defect** 光伏组件缺陷数据集的清理、划分与标准化版（Li、Wang 与 Zhang，*Electronics* 2023，DOI 10.3390/electronics12030561；上游 [houhou34/PV-Multi-Defect](https://github.com/houhou34/PV-Multi-Defect)；上游未声明许可证）：删除 **61 张逐字节完全重复图**（61 对）；剔除 **2 张无标注图**（`img3059`、`img9513`）与 **1 个空标注**（`img7863`）；把唯一的近重复簇（12 张感知近似图）归组并固定到同一划分，配合固定种子、按类别分层的 **70/15/15** 划分（上游完全没有划分）；清理 VOC 元数据（错误的 `<folder>` 值 `new`/`result2`，以及泄露个人 Windows 路径的硬编码 `<path>`，如 `C:\\Users\\86151\\Desktop\\\\...`）；并生成 YOLO TXT 标注、`classes.txt`、`data.yaml` 与 CSV。**3,403 个标注框全部原样迁移**，未做任何缩放、平移或重推。5 类：`hot_spot`（1,553）、`scratch`（1,349）、`black_border`（251）、`no_electricity`（158）、`broken`（92）。"
+
   - id: DBA_Fire_Smoke-corrected
     emoji: "🔥"
     domain_en: "Safety — fire & smoke detection"

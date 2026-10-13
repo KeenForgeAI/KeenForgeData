@@ -26,6 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
+| **PV_Multi_Defect-corrected** | ☀️ Energy — photovoltaic inspection | 1,044 | 3,403 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PV_Multi_Defect-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PV_Multi_Defect-corrected) |
 | **DBA_Fire_Smoke-corrected** | 🔥 Safety — fire & smoke detection | 3,846 | 7,988 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) |
 | **CPLID_Insulators-corrected** | ⚡ Energy — power-line inspection | 845 | 1,566 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/CPLID_Insulators-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/CPLID_Insulators-corrected) |
 | **PlantDoc-corrected** | 🌱 Agriculture — plant disease | 2,565 | 8,887 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PlantDoc-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PlantDoc-corrected) |
@@ -52,6 +53,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
+- **PV_Multi_Defect-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PV_Multi_Defect-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PV_Multi_Defect-corrected) · [DOI](https://doi.org/10.57967/hf/10882)
 - **DBA_Fire_Smoke-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) · [DOI](https://doi.org/10.57967/hf/10880)
 - **CPLID_Insulators-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/CPLID_Insulators-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/CPLID_Insulators-corrected) · [DOI](https://doi.org/10.57967/hf/10878)
 - **PlantDoc-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PlantDoc-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PlantDoc-corrected) · [DOI](https://doi.org/10.57967/hf/10678)
@@ -83,6 +85,12 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
+#### ☀️ PV_Multi_Defect-corrected — 1,044 images · 3,403 boxes
+
+DOI: [10.57967/hf/10882](https://doi.org/10.57967/hf/10882)
+
+Photovoltaic panel multi-defect detection (hot spot / scratch / border / non-electricity / broken), 5 classes, Pascal VOC + YOLO annotations, with a near-duplicate-aware split. Cleaned, split and standardized version of the **PV-Multi-Defect** photovoltaic panel defect dataset (Li, Wang & Zhang, *Electronics* 2023, DOI 10.3390/electronics12030561; upstream [houhou34/PV-Multi-Defect](https://github.com/houhou34/PV-Multi-Defect); upstream licence unstated): **61 byte-identical duplicate images** (61 pairs) were removed; **2 unannotated images** (`img3059`, `img9513`) and **1 empty annotation** (`img7863`) were dropped; the single near-duplicate cluster (12 perceptually identical images) was grouped so it stays on one side of a seeded, class-stratified **70/15/15** split (upstream had none); the VOC metadata was cleaned (a bogus `<folder>` value `new`/`result2` and a hard-coded personal Windows `<path>` such as `C:\Users\86151\Desktop\\...`); and YOLO TXT annotations, `classes.txt`, `data.yaml` and CSVs were generated. **All 3,403 bounding boxes are carried over unchanged** — no coordinate was scaled, shifted or re-guessed. 5 classes: `hot_spot` (1,553), `scratch` (1,349), `black_border` (251), `no_electricity` (158), `broken` (92).
+
 #### 🔥 DBA_Fire_Smoke-corrected — 3,846 images · 7,988 boxes
 
 DOI: [10.57967/hf/10880](https://doi.org/10.57967/hf/10880)
