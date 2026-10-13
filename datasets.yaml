@@ -26,6 +26,25 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: DBA_Fire_Smoke-corrected
+    emoji: "🔥"
+    domain_en: "Safety — fire & smoke detection"
+    domain_zh: "安防 — 火焰与烟雾检测"
+    domain_short: "Safety (fire/smoke)"
+    images: 3846
+    boxes: 7988
+    classes: 2
+    format: "Pascal VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected
+    doi: 10.57967/hf/10880
+    description_en: "Fire and smoke detection, 2 classes (VOC + YOLO) — de-duplicated and split version of the DBA-Fire dataset"
+    description_zh: "火焰与烟雾检测，2 类（VOC + YOLO）—— DBA-Fire 数据集的去重与划分版"
+    blurb_en: "Fire and smoke detection (flame / smoke), 2 classes, Pascal VOC + YOLO annotations, with a near-duplicate-aware split."
+    blurb_zh: "火焰与烟雾检测（火焰 / 烟雾），2 类，Pascal VOC + YOLO 格式，近重复感知划分。"
+    summary_en: "Cleaned, de-duplicated, split and standardized version of the **DBA-Fire** fire and smoke detection dataset (reference paper: *DBA-YOLO: A Lightweight Fire Detection Algorithm with Structural Reparameterized Multiple Attention Mechanisms*; upstream licence unstated): **59 byte-identical duplicate images** (57 groups) were removed; because many images are perceptually near-identical (consecutive video frames plus re-encoded copies), each of the **3,014 near-duplicate clusters** (largest 87 images; 1,028 images live in multi-image clusters) was assigned **entirely to one split** so near-identical content never straddles train/val/test; **521 filenames** containing spaces/parentheses were normalised to `[A-Za-z0-9._-]`; a seeded, class-stratified **70/15/15** split was added (upstream had none); and Pascal VOC XML + YOLO TXT annotations, `classes.txt`, `data.yaml` and CSVs were generated. **All 7,988 bounding boxes are carried over unchanged** — no coordinate was scaled, shifted or re-guessed."
+    summary_zh: "**DBA-Fire** 火焰与烟雾检测数据集的清理、去重、划分与标准化版（参考论文《DBA-YOLO: A Lightweight Fire Detection Algorithm with Structural Reparameterized Multiple Attention Mechanisms》；上游未声明许可证）：删除 **59 张逐字节完全重复图**（57 组）；由于大量图片在感知上几乎相同（连续视频帧 + 重编码副本），把 **3,014 个近重复分组**（最大一组 87 张；共 1,028 张位于多图分组）**整组分配到同一划分**，确保近似内容绝不跨越 train/val/test；把 **521 个含空格/括号的文件名**规整为 `[A-Za-z0-9._-]`；新增固定种子、按类别分层的 **70/15/15** 划分（上游完全没有划分）；并生成 Pascal VOC XML + YOLO TXT 标注、`classes.txt`、`data.yaml` 与 CSV。**7,988 个标注框全部原样迁移**，未做任何缩放、平移或重推。"
+
   - id: CPLID_Insulators-corrected
     emoji: "⚡"
     domain_en: "Energy — power-line inspection"

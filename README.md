@@ -26,6 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
+| **DBA_Fire_Smoke-corrected** | 🔥 Safety — fire & smoke detection | 3,846 | 7,988 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) |
 | **CPLID_Insulators-corrected** | ⚡ Energy — power-line inspection | 845 | 1,566 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/CPLID_Insulators-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/CPLID_Insulators-corrected) |
 | **PlantDoc-corrected** | 🌱 Agriculture — plant disease | 2,565 | 8,887 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PlantDoc-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PlantDoc-corrected) |
 | **PCB_AoI_KubeEdge-corrected** | 🖥️ Industrial — PCB | 233 | 1,011 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) |
@@ -51,6 +52,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
+- **DBA_Fire_Smoke-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) · [DOI](https://doi.org/10.57967/hf/10880)
 - **CPLID_Insulators-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/CPLID_Insulators-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/CPLID_Insulators-corrected) · [DOI](https://doi.org/10.57967/hf/10878)
 - **PlantDoc-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PlantDoc-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PlantDoc-corrected) · [DOI](https://doi.org/10.57967/hf/10678)
 - **PCB_AoI_KubeEdge-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) · [DOI](https://doi.org/10.57967/hf/10677)
@@ -81,6 +83,12 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
+#### 🔥 DBA_Fire_Smoke-corrected — 3,846 images · 7,988 boxes
+
+DOI: [10.57967/hf/10880](https://doi.org/10.57967/hf/10880)
+
+Fire and smoke detection (flame / smoke), 2 classes, Pascal VOC + YOLO annotations, with a near-duplicate-aware split. Cleaned, de-duplicated, split and standardized version of the **DBA-Fire** fire and smoke detection dataset (reference paper: *DBA-YOLO: A Lightweight Fire Detection Algorithm with Structural Reparameterized Multiple Attention Mechanisms*; upstream licence unstated): **59 byte-identical duplicate images** (57 groups) were removed; because many images are perceptually near-identical (consecutive video frames plus re-encoded copies), each of the **3,014 near-duplicate clusters** (largest 87 images; 1,028 images live in multi-image clusters) was assigned **entirely to one split** so near-identical content never straddles train/val/test; **521 filenames** containing spaces/parentheses were normalised to `[A-Za-z0-9._-]`; a seeded, class-stratified **70/15/15** split was added (upstream had none); and Pascal VOC XML + YOLO TXT annotations, `classes.txt`, `data.yaml` and CSVs were generated. **All 7,988 bounding boxes are carried over unchanged** — no coordinate was scaled, shifted or re-guessed.
+
 #### ⚡ CPLID_Insulators-corrected — 845 images · 1,566 boxes
 
 DOI: [10.57967/hf/10878](https://doi.org/10.57967/hf/10878)

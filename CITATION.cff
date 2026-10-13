@@ -32,6 +32,22 @@ date-released: "2026-09-20"
 references:
   - type: dataset
     title: >-
+      DBA_Fire_Smoke-corrected: a cleaned release of the DBA-Fire fire and smoke
+      detection dataset
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    doi: "10.57967/hf/10880"
+    notes: >-
+      Derived from the DBA-Fire dataset (reference paper: "DBA-YOLO: A Lightweight
+      Fire Detection Algorithm with Structural Reparameterized Multiple Attention
+      Mechanisms"). Upstream licence unstated. Curated by Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
       CPLID_Insulators-corrected: a cleaned release of the Chinese Power Line
       Insulator Dataset (CPLID)
     authors:
