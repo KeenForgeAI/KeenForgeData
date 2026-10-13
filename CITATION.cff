@@ -32,6 +32,22 @@ date-released: "2026-09-20"
 references:
   - type: dataset
     title: >-
+      CPLID_Insulators-corrected: a cleaned release of the Chinese Power Line
+      Insulator Dataset (CPLID)
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    doi: "10.57967/hf/10878"
+    notes: >-
+      Derived from the Chinese Power Line Insulator Dataset (CPLID; images from
+      the State Grid Corporation of China, assembled by WANG Zi-Hao). Upstream
+      licence unstated. Curated by Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
       PlantDoc-corrected: a cleaned release of the PlantDoc plant leaf disease
       object-detection dataset
     authors:

@@ -26,6 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
+| **CPLID_Insulators-corrected** | ⚡ Energy — power-line inspection | 845 | 1,566 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/CPLID_Insulators-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/CPLID_Insulators-corrected) |
 | **PlantDoc-corrected** | 🌱 Agriculture — plant disease | 2,565 | 8,887 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PlantDoc-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PlantDoc-corrected) |
 | **PCB_AoI_KubeEdge-corrected** | 🖥️ Industrial — PCB | 233 | 1,011 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) |
 | **MagneticTile-corrected** | 🧲 Industrial — magnetic tile | 1,318 | 437 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/MagneticTile-corrected) |
@@ -50,6 +51,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
+- **CPLID_Insulators-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/CPLID_Insulators-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/CPLID_Insulators-corrected) · [DOI](https://doi.org/10.57967/hf/10878)
 - **PlantDoc-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PlantDoc-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PlantDoc-corrected) · [DOI](https://doi.org/10.57967/hf/10678)
 - **PCB_AoI_KubeEdge-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PCB_AoI_KubeEdge-corrected) · [DOI](https://doi.org/10.57967/hf/10677)
 - **MagneticTile-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/MagneticTile-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/MagneticTile-corrected) · [DOI](https://doi.org/10.57967/hf/10659)
@@ -79,6 +81,12 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
+#### ⚡ CPLID_Insulators-corrected — 845 images · 1,566 boxes
+
+DOI: [10.57967/hf/10878](https://doi.org/10.57967/hf/10878)
+
+Power-line insulator defect detection (insulator / defect), 2 classes, Pascal VOC + YOLO annotations, with a burst-frame-aware split. Cleaned, split and standardized version of the **Chinese Power Line Insulator Dataset (CPLID)** (Tao et al., *IEEE TSMC: Systems* 2018; images provided by the State Grid Corporation of China, assembled by WANG Zi-Hao; upstream [InsulatorData/InsulatorDataSet](https://github.com/InsulatorData/InsulatorDataSet)): **3 pixel-identical duplicate images** in `Normal_Insulators` were removed (`0150`=`2984`, `0852`=`1876`, `1608`=`1938`); because the 600 normal images are **UAV video frames**, consecutive captures were grouped into **486 frame chains** and each chain assigned entirely to one split so no near-identical burst straddles train/val/test; the two parallel defective-insulator label folders (`labels/defect/` + `labels/insulator/`) were **merged into one annotation per image** (insulator box + defect box); a seeded, class-stratified **70/15/15** split was added (upstream had none); the VOC metadata was cleaned (bogus `<folder>` values `images`/`long`/empty, and a hard-coded local `<path>` leaking personal absolute paths with Chinese characters); a stray 48-byte non-image file (`OriginalImageOnWebDriver`) was removed; and Pascal VOC + YOLO annotations, `classes.txt`, `data.yaml` and CSVs were added. **All 1,566 bounding boxes are carried over unchanged** — no coordinate was scaled, shifted or re-guessed. Note: the **defective** images are **synthetic** (TVSeg + U-Net pipeline, as described upstream). Upstream licence unstated.
+
 #### 🌱 PlantDoc-corrected — 2,565 images · 8,887 boxes
 
 DOI: [10.57967/hf/10678](https://doi.org/10.57967/hf/10678)

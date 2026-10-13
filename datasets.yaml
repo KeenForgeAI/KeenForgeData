@@ -26,6 +26,25 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: CPLID_Insulators-corrected
+    emoji: "⚡"
+    domain_en: "Energy — power-line inspection"
+    domain_zh: "能源 — 电力巡线"
+    domain_short: "Energy (power-line)"
+    images: 845
+    boxes: 1566
+    classes: 2
+    format: "Pascal VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/CPLID_Insulators-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/CPLID_Insulators-corrected
+    doi: 10.57967/hf/10878
+    description_en: "Power-line insulator defect detection, 2 classes (VOC + YOLO) — cleaned and split version of the Chinese Power Line Insulator Dataset (CPLID)"
+    description_zh: "电力巡线绝缘子缺陷检测，2 类（VOC + YOLO）—— 中国电力线绝缘子数据集（CPLID）的清理与划分版"
+    blurb_en: "Power-line insulator defect detection (insulator / defect), 2 classes, Pascal VOC + YOLO annotations, with a burst-frame-aware split."
+    blurb_zh: "电力巡线绝缘子缺陷检测（绝缘子 / 缺陷），2 类，Pascal VOC + YOLO 格式，连拍帧感知划分。"
+    summary_en: "Cleaned, split and standardized version of the **Chinese Power Line Insulator Dataset (CPLID)** (Tao et al., *IEEE TSMC: Systems* 2018; images provided by the State Grid Corporation of China, assembled by WANG Zi-Hao; upstream [InsulatorData/InsulatorDataSet](https://github.com/InsulatorData/InsulatorDataSet)): **3 pixel-identical duplicate images** in `Normal_Insulators` were removed (`0150`=`2984`, `0852`=`1876`, `1608`=`1938`); because the 600 normal images are **UAV video frames**, consecutive captures were grouped into **486 frame chains** and each chain assigned entirely to one split so no near-identical burst straddles train/val/test; the two parallel defective-insulator label folders (`labels/defect/` + `labels/insulator/`) were **merged into one annotation per image** (insulator box + defect box); a seeded, class-stratified **70/15/15** split was added (upstream had none); the VOC metadata was cleaned (bogus `<folder>` values `images`/`long`/empty, and a hard-coded local `<path>` leaking personal absolute paths with Chinese characters); a stray 48-byte non-image file (`OriginalImageOnWebDriver`) was removed; and Pascal VOC + YOLO annotations, `classes.txt`, `data.yaml` and CSVs were added. **All 1,566 bounding boxes are carried over unchanged** — no coordinate was scaled, shifted or re-guessed. Note: the **defective** images are **synthetic** (TVSeg + U-Net pipeline, as described upstream). Upstream licence unstated."
+    summary_zh: "**中国电力线绝缘子数据集（CPLID）** 的清理、划分与标准化版（Tao 等，*IEEE TSMC: Systems* 2018；图像由国家电网公司提供，王自浩整理；上游 [InsulatorData/InsulatorDataSet](https://github.com/InsulatorData/InsulatorDataSet)）：删除 `Normal_Insulators` 中的 **3 张像素级完全重复图**（`0150`=`2984`、`0852`=`1876`、`1608`=`1938`）；由于 600 张正常图均为**无人机视频帧**，将连续帧归并为 **486 个连拍链**，整链分配到同一划分，确保近似重复帧不会跨越 train/val/test；把两个平行的缺陷绝缘子标签目录（`labels/defect/` + `labels/insulator/`）**合并为每图一份标注**（绝缘子框 + 缺陷框）；新增固定种子、按类别分层的 **70/15/15** 划分（上游完全没有划分）；清理 VOC 元数据（错误的 `<folder>` 值 `images`/`long`/空，以及泄露含中文个人绝对路径的硬编码 `<path>`）；删除一个 48 字节的垃圾非图片文件（`OriginalImageOnWebDriver`）；并补充 Pascal VOC + YOLO 标注、`classes.txt`、`data.yaml` 与 CSV。**1,566 个标注框全部原样迁移**，未做任何缩放、平移或重推。注意：**缺陷图是合成的**（上游所述 TVSeg + U-Net 流程）。上游未声明许可证。"
+
   - id: PlantDoc-corrected
     emoji: "🌱"
     domain_en: "Agriculture — plant disease"
