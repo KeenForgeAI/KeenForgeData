@@ -26,6 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
+| **VisuCeram_500x500-corrected** | 🧱 Industrial — ceramic surface inspection | 3,264 | 6,042 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/VisuCeram_500x500-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/VisuCeram_500x500-corrected) |
 | **PV_Multi_Defect-corrected** | ☀️ Energy — photovoltaic inspection | 1,044 | 3,403 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PV_Multi_Defect-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PV_Multi_Defect-corrected) |
 | **DBA_Fire_Smoke-corrected** | 🔥 Safety — fire & smoke detection | 3,846 | 7,988 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) |
 | **CPLID_Insulators-corrected** | ⚡ Energy — power-line inspection | 845 | 1,566 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/CPLID_Insulators-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/CPLID_Insulators-corrected) |
@@ -53,6 +54,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
+- **VisuCeram_500x500-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/VisuCeram_500x500-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/VisuCeram_500x500-corrected) · [DOI](https://doi.org/10.57967/hf/10884)
 - **PV_Multi_Defect-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PV_Multi_Defect-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PV_Multi_Defect-corrected) · [DOI](https://doi.org/10.57967/hf/10882)
 - **DBA_Fire_Smoke-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) · [DOI](https://doi.org/10.57967/hf/10880)
 - **CPLID_Insulators-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/CPLID_Insulators-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/CPLID_Insulators-corrected) · [DOI](https://doi.org/10.57967/hf/10878)
@@ -85,6 +87,12 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
+#### 🧱 VisuCeram_500x500-corrected — 3,264 images · 6,042 boxes
+
+DOI: [10.57967/hf/10884](https://doi.org/10.57967/hf/10884)
+
+Sanitary-ware ceramic surface defect detection (spot / body crack / glaze crack / crawling / pinhole / sign / no-defect), 7 classes, Pascal VOC + YOLO annotations, Apache-2.0. Cleaned, split and standardized version of the **VisuCeram 500x500** sanitary-ware ceramic surface defect dataset (Azad & Nahid, *IEEE* 2025; upstream [Md-Ali-Azad/VisuCeram](https://github.com/Md-Ali-Azad/VisuCeram); licensed **Apache-2.0**): **15 out-of-range boxes** (normalised centre up to 1.65 — placed outside the frame) were removed, and the 1 image left with no boxes was dropped; the per-class folder layout was **flattened** into a single image/label pool (a single image may hold boxes of several classes); a seeded, class-stratified **70/15/15** split was added (upstream has none); three perceptually near-identical pairs were kept on one side of the split; and Pascal VOC XML + YOLO TXT annotations, `classes.txt`, `data.yaml` and CSVs were generated. **All 6,042 valid bounding boxes are carried over unchanged** — no valid coordinate was altered. 7 classes: `spot` (2,030), `body_crack` (997), `glaze_crack` (973), `no_defect` (548), `crawling` (532), `pinhole` (509), `sign` (453). (In the upstream scheme `no_defect` is itself an annotated category, kept verbatim.)
+
 #### ☀️ PV_Multi_Defect-corrected — 1,044 images · 3,403 boxes
 
 DOI: [10.57967/hf/10882](https://doi.org/10.57967/hf/10882)

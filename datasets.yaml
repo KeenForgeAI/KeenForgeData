@@ -26,6 +26,25 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: VisuCeram_500x500-corrected
+    emoji: "🧱"
+    domain_en: "Industrial — ceramic surface inspection"
+    domain_zh: "工业 — 陶瓷表面质检"
+    domain_short: "Industrial (ceramic)"
+    images: 3264
+    boxes: 6042
+    classes: 7
+    format: "Pascal VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/VisuCeram_500x500-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/VisuCeram_500x500-corrected
+    doi: 10.57967/hf/10884
+    description_en: "Sanitary-ware ceramic surface defect detection, 7 classes (VOC + YOLO, Apache-2.0) — cleaned, de-folder and split version of VisuCeram 500x500"
+    description_zh: "卫浴陶瓷表面缺陷检测，7 类（VOC + YOLO，Apache-2.0）—— VisuCeram 500x500 的清理与划分版"
+    blurb_en: "Sanitary-ware ceramic surface defect detection (spot / body crack / glaze crack / crawling / pinhole / sign / no-defect), 7 classes, Pascal VOC + YOLO annotations, Apache-2.0."
+    blurb_zh: "卫浴陶瓷表面缺陷检测（斑点 / 坯裂 / 釉裂 / 爬釉 / 针孔 / 印记 / 无缺陷），7 类，Pascal VOC + YOLO 格式，Apache-2.0。"
+    summary_en: "Cleaned, split and standardized version of the **VisuCeram 500x500** sanitary-ware ceramic surface defect dataset (Azad & Nahid, *IEEE* 2025; upstream [Md-Ali-Azad/VisuCeram](https://github.com/Md-Ali-Azad/VisuCeram); licensed **Apache-2.0**): **15 out-of-range boxes** (normalised centre up to 1.65 — placed outside the frame) were removed, and the 1 image left with no boxes was dropped; the per-class folder layout was **flattened** into a single image/label pool (a single image may hold boxes of several classes); a seeded, class-stratified **70/15/15** split was added (upstream has none); three perceptually near-identical pairs were kept on one side of the split; and Pascal VOC XML + YOLO TXT annotations, `classes.txt`, `data.yaml` and CSVs were generated. **All 6,042 valid bounding boxes are carried over unchanged** — no valid coordinate was altered. 7 classes: `spot` (2,030), `body_crack` (997), `glaze_crack` (973), `no_defect` (548), `crawling` (532), `pinhole` (509), `sign` (453). (In the upstream scheme `no_defect` is itself an annotated category, kept verbatim.)"
+    summary_zh: "**VisuCeram 500x500** 卫浴陶瓷表面缺陷数据集的清理、划分与标准化版（Azad 与 Nahid，*IEEE* 2025；上游 [Md-Ali-Azad/VisuCeram](https://github.com/Md-Ali-Azad/VisuCeram)；采用 **Apache-2.0** 许可）：删除 **15 个越界框**（归一化中心最高 1.65，落在画面之外），并丢弃删除后无框的 1 张图；把按类别命名的文件夹**摊平**为统一图池（单张图可能含多个类别的框）；新增固定种子、按类别分层的 **70/15/15** 划分（上游完全没有划分）；三对感知近似图固定在同一划分内；并生成 Pascal VOC XML + YOLO TXT 标注、`classes.txt`、`data.yaml` 与 CSV。**6,042 个有效标注框全部原样迁移**，未修改任何有效坐标。7 类：`spot`（2,030）、`body_crack`（997）、`glaze_crack`（973）、`no_defect`（548）、`crawling`（532）、`pinhole`（509）、`sign`（453）。（在上游方案中 `no_defect` 本身即为一个可标注类别，此处沿用原名。）"
+
   - id: PV_Multi_Defect-corrected
     emoji: "☀️"
     domain_en: "Energy — photovoltaic inspection"
