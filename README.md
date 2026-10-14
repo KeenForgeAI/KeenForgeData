@@ -26,6 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
+| **RoadCrack_DL_HY-corrected** | 🛣️ Civil — pavement crack detection | 2,189 | 2,677 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected) |
 | **VisuCeram_500x500-corrected** | 🧱 Industrial — ceramic surface inspection | 3,264 | 6,042 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/VisuCeram_500x500-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/VisuCeram_500x500-corrected) |
 | **PV_Multi_Defect-corrected** | ☀️ Energy — photovoltaic inspection | 1,044 | 3,403 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PV_Multi_Defect-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PV_Multi_Defect-corrected) |
 | **DBA_Fire_Smoke-corrected** | 🔥 Safety — fire & smoke detection | 3,846 | 7,988 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) |
@@ -54,6 +55,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
+- **RoadCrack_DL_HY-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected) · [DOI](https://doi.org/10.57967/hf/10896)
 - **VisuCeram_500x500-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/VisuCeram_500x500-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/VisuCeram_500x500-corrected) · [DOI](https://doi.org/10.57967/hf/10884)
 - **PV_Multi_Defect-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PV_Multi_Defect-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PV_Multi_Defect-corrected) · [DOI](https://doi.org/10.57967/hf/10882)
 - **DBA_Fire_Smoke-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/DBA_Fire_Smoke-corrected) · [DOI](https://doi.org/10.57967/hf/10880)
@@ -87,6 +89,12 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
+#### 🛣️ RoadCrack_DL_HY-corrected — 2,189 images · 2,677 boxes
+
+DOI: [10.57967/hf/10896](https://doi.org/10.57967/hf/10896)
+
+Pavement crack detection (transverse / alligator / longitudinal / sealed), 4 classes, Pascal VOC + YOLO annotations, box-level only. Non-commercial research use only. Cleaned, split and standardized **box-level** version of the **CrackDataset_DL_HY** pavement crack database (Huyan & Li et al.; **NON-COMMERCIAL RESEARCH USE ONLY**, Copyright Wei Li Research Team, Chang'An University): only the `BoxLevel_Detection` portion is included (the pixel-level `SematicSeg_Dataset` and the bundled label tools are excluded); the misspelled category **`transeverse`** (240 boxes) was merged into `transverse`; **138 empty annotations**, **60 unannotated images**, and the **7 images left empty after removing 12 out-of-range boxes** were dropped; **44 byte-identical duplicate images** were removed; perceptually near-identical vehicle-capture frames were grouped so each cluster stays on one side of a seeded, class-stratified **70/15/15** split (upstream has none); the GBK-mojibake `<folder>` values and the wrong hard-coded `<path>` were cleaned; and Pascal VOC XML + YOLO TXT annotations, `classes.txt`, `data.yaml` and CSVs were generated. **All 2,677 valid bounding boxes are carried over unchanged** — no coordinate was altered. 4 classes: `transverse` (1,069), `alligator` (597), `longitudinal` (585), `sealed` (426).
+
 #### 🧱 VisuCeram_500x500-corrected — 3,264 images · 6,042 boxes
 
 DOI: [10.57967/hf/10884](https://doi.org/10.57967/hf/10884)

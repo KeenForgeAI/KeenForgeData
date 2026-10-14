@@ -32,6 +32,22 @@ date-released: "2026-09-20"
 references:
   - type: dataset
     title: >-
+      RoadCrack_DL_HY-corrected: a cleaned box-level release of the
+      CrackDataset_DL_HY pavement crack dataset
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    doi: "10.57967/hf/10896"
+    notes: >-
+      Derived from CrackDataset_DL_HY (Huyan, Li et al.). NON-COMMERCIAL
+      RESEARCH USE ONLY; Copyright Wei Li Research Team, Chang' An University.
+      Curated by Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
       VisuCeram_500x500-corrected: a cleaned release of the VisuCeram
       sanitary-ware ceramic defect dataset
     authors:

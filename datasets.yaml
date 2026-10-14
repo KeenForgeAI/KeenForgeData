@@ -26,6 +26,25 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: RoadCrack_DL_HY-corrected
+    emoji: "🛣️"
+    domain_en: "Civil — pavement crack detection"
+    domain_zh: "土木 — 路面裂缝检测"
+    domain_short: "Civil (crack)"
+    images: 2189
+    boxes: 2677
+    classes: 4
+    format: "Pascal VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected
+    doi: 10.57967/hf/10896
+    description_en: "Pavement crack detection, 4 classes (VOC + YOLO) — cleaned box-level version of CrackDataset_DL_HY. Non-commercial research use only."
+    description_zh: "路面裂缝检测，4 类（VOC + YOLO）—— CrackDataset_DL_HY 的框级清理版。仅限非商业研究用途。"
+    blurb_en: "Pavement crack detection (transverse / alligator / longitudinal / sealed), 4 classes, Pascal VOC + YOLO annotations, box-level only. Non-commercial research use only."
+    blurb_zh: "路面裂缝检测（横向 / 龟裂 / 纵向 / 填缝），4 类，Pascal VOC + YOLO 格式，仅框级。仅限非商业研究用途。"
+    summary_en: "Cleaned, split and standardized **box-level** version of the **CrackDataset_DL_HY** pavement crack database (Huyan & Li et al.; **NON-COMMERCIAL RESEARCH USE ONLY**, Copyright Wei Li Research Team, Chang'An University): only the `BoxLevel_Detection` portion is included (the pixel-level `SematicSeg_Dataset` and the bundled label tools are excluded); the misspelled category **`transeverse`** (240 boxes) was merged into `transverse`; **138 empty annotations**, **60 unannotated images**, and the **7 images left empty after removing 12 out-of-range boxes** were dropped; **44 byte-identical duplicate images** were removed; perceptually near-identical vehicle-capture frames were grouped so each cluster stays on one side of a seeded, class-stratified **70/15/15** split (upstream has none); the GBK-mojibake `<folder>` values and the wrong hard-coded `<path>` were cleaned; and Pascal VOC XML + YOLO TXT annotations, `classes.txt`, `data.yaml` and CSVs were generated. **All 2,677 valid bounding boxes are carried over unchanged** — no coordinate was altered. 4 classes: `transverse` (1,069), `alligator` (597), `longitudinal` (585), `sealed` (426)."
+    summary_zh: "**CrackDataset_DL_HY** 路面裂缝数据库的**框级**清理、划分与标准化版（Huyan 与 Li 等；**仅限非商业研究用途**，版权归长安大学 Wei Li 研究团队）：仅包含 `BoxLevel_Detection` 部分（像素级 `SematicSeg_Dataset` 与随附标注工具已排除）；把拼写错误的类别 **`transeverse`**（240 框）并入 `transverse`；删除 **138 个空标注**、**60 张无标注图**，以及**删除 12 个越界框后变空的 7 张图**；删除 **44 张逐字节完全重复图**；把感知近似的车载连拍帧归组，使每个簇只出现在固定种子、按类别分层的 **70/15/15** 划分的一侧（上游完全没有划分）；清理 GBK 乱码 `<folder>` 与错误的硬编码 `<path>`；并生成 Pascal VOC XML + YOLO TXT 标注、`classes.txt`、`data.yaml` 与 CSV。**2,677 个有效标注框全部原样迁移**，未改动任何坐标。4 类：`transverse`（1,069）、`alligator`（597）、`longitudinal`（585）、`sealed`（426）。"
+
   - id: VisuCeram_500x500-corrected
     emoji: "🧱"
     domain_en: "Industrial — ceramic surface inspection"
