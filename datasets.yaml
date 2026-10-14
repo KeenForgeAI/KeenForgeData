@@ -26,6 +26,25 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: TrafficSigns_YOLO-corrected
+    emoji: "🚦"
+    domain_en: "Transport — traffic sign detection"
+    domain_zh: "交通 — 交通标志检测"
+    domain_short: "Transport (traffic signs)"
+    images: 6000
+    boxes: 6000
+    classes: 6
+    format: "Pascal VOC + YOLO"
+    hf: https://huggingface.co/datasets/KeenForgeAI/TrafficSigns_YOLO-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/TrafficSigns_YOLO-corrected
+    doi: 10.57967/hf/10898
+    description_en: "Traffic sign detection, 6 classes (VOC + YOLO) — leak-safe re-split of the YOLOv8-YOLOv11 traffic sign benchmark dataset"
+    description_zh: "交通标志检测，6 类（VOC + YOLO）—— YOLOv8-YOLOv11 交通标志基准数据集的防泄漏重划分版"
+    blurb_en: "Traffic sign detection (left/straight/right/dead-end/no-entry/stop), 6 classes, Pascal VOC + YOLO annotations, with a leak-safe split that keeps near-identical augmentations on one side."
+    blurb_zh: "交通标志检测（左转 / 直行 / 右转 / 尽头 / 禁行 / 停车），6 类，Pascal VOC + YOLO 格式，防泄漏划分（近重复增强图固定同侧）。"
+    summary_en: "Leak-safe, standardized version of the **Traffic Signs Dataset** for YOLOv8–YOLOv11 benchmarking (Reveles-Martínez, Gamboa-Rosales et al., *Technologies* 2025; upstream [rrevelesm/Articulos-Benchmarking-YOLOv8-to-YOLOv11](https://github.com/rrevelesm/Articulos-Benchmarking-YOLOv8-to-YOLOv11); upstream licence unstated): the 6,000 images are heavily Roboflow-augmented, and **2,526 of them form near-identical clusters** (identical 8×8-dHash and 32×32 pixel-MSE ≤ 1; largest cluster 25 images); the upstream random split scattered these near-identical copies across train/valid/test (leakage). Each near-identical cluster is now assigned **entirely to one side** of a seeded, class-stratified split (**4259 / 858 / 883**) that replaces the upstream **4200 / 1200 / 600**; Pascal VOC XML annotations, `classes.txt`, `data.yaml` and per-split CSVs were added. **All 6,000 bounding boxes (exactly one per image) are carried over unchanged** — no coordinate was altered. 6 classes ×1,000 each: `left_turn`, `straight_ahead`, `right_turn`, `dead_end`, `no_entry`, `stop`."
+    summary_zh: "面向 **YOLOv8–YOLOv11 基准测试**的**交通标志数据集**的防泄漏标准化版（Reveles-Martínez、Gamboa-Rosales 等，*Technologies* 2025；上游 [rrevelesm/Articulos-Benchmarking-YOLOv8-to-YOLOv11](https://github.com/rrevelesm/Articulos-Benchmarking-YOLOv8-to-YOLOv11)；上游未声明许可证）：6000 张图为 Roboflow 重度增强产物，其中 **2526 张构成近重复簇**（8×8 dHash 相同且 32×32 像素 MSE ≤ 1；最大簇 25 张）；上游随机划分把这些近似副本散布到了 train/valid/test（泄漏）。本版把每个近重复簇**整体分配到同一划分**，用固定种子、按类别分层的划分（**4259 / 858 / 883**）替换上游的 **4200 / 1200 / 600**；并补充 Pascal VOC XML 标注、`classes.txt`、`data.yaml` 与按划分的 CSV。**6000 个标注框（每图恰好 1 个）全部原样迁移**，未改动任何坐标。6 类各 1000：`left_turn`、`straight_ahead`、`right_turn`、`dead_end`、`no_entry`、`stop`。"
+
   - id: RoadCrack_DL_HY-corrected
     emoji: "🛣️"
     domain_en: "Civil — pavement crack detection"

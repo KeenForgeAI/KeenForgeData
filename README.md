@@ -26,6 +26,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 <!-- GEN:TABLE -->
 | Dataset | Domain | Images | Boxes | Hugging Face | ModelScope |
 |---|---|---|---|---|---|
+| **TrafficSigns_YOLO-corrected** | 🚦 Transport — traffic sign detection | 6,000 | 6,000 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/TrafficSigns_YOLO-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TrafficSigns_YOLO-corrected) |
 | **RoadCrack_DL_HY-corrected** | 🛣️ Civil — pavement crack detection | 2,189 | 2,677 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected) |
 | **VisuCeram_500x500-corrected** | 🧱 Industrial — ceramic surface inspection | 3,264 | 6,042 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/VisuCeram_500x500-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/VisuCeram_500x500-corrected) |
 | **PV_Multi_Defect-corrected** | ☀️ Energy — photovoltaic inspection | 1,044 | 3,403 | [![HF](https://img.shields.io/badge/HF-dataset-yellow)](https://huggingface.co/datasets/KeenForgeAI/PV_Multi_Defect-corrected) | [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PV_Multi_Defect-corrected) |
@@ -55,6 +56,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
+- **TrafficSigns_YOLO-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/TrafficSigns_YOLO-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TrafficSigns_YOLO-corrected) · [DOI](https://doi.org/10.57967/hf/10898)
 - **RoadCrack_DL_HY-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected) · [DOI](https://doi.org/10.57967/hf/10896)
 - **VisuCeram_500x500-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/VisuCeram_500x500-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/VisuCeram_500x500-corrected) · [DOI](https://doi.org/10.57967/hf/10884)
 - **PV_Multi_Defect-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/PV_Multi_Defect-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/PV_Multi_Defect-corrected) · [DOI](https://doi.org/10.57967/hf/10882)
@@ -89,6 +91,12 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 ### 📚 Dataset details
 
 <!-- GEN:DETAILS -->
+#### 🚦 TrafficSigns_YOLO-corrected — 6,000 images · 6,000 boxes
+
+DOI: [10.57967/hf/10898](https://doi.org/10.57967/hf/10898)
+
+Traffic sign detection (left/straight/right/dead-end/no-entry/stop), 6 classes, Pascal VOC + YOLO annotations, with a leak-safe split that keeps near-identical augmentations on one side. Leak-safe, standardized version of the **Traffic Signs Dataset** for YOLOv8–YOLOv11 benchmarking (Reveles-Martínez, Gamboa-Rosales et al., *Technologies* 2025; upstream [rrevelesm/Articulos-Benchmarking-YOLOv8-to-YOLOv11](https://github.com/rrevelesm/Articulos-Benchmarking-YOLOv8-to-YOLOv11); upstream licence unstated): the 6,000 images are heavily Roboflow-augmented, and **2,526 of them form near-identical clusters** (identical 8×8-dHash and 32×32 pixel-MSE ≤ 1; largest cluster 25 images); the upstream random split scattered these near-identical copies across train/valid/test (leakage). Each near-identical cluster is now assigned **entirely to one side** of a seeded, class-stratified split (**4259 / 858 / 883**) that replaces the upstream **4200 / 1200 / 600**; Pascal VOC XML annotations, `classes.txt`, `data.yaml` and per-split CSVs were added. **All 6,000 bounding boxes (exactly one per image) are carried over unchanged** — no coordinate was altered. 6 classes ×1,000 each: `left_turn`, `straight_ahead`, `right_turn`, `dead_end`, `no_entry`, `stop`.
+
 #### 🛣️ RoadCrack_DL_HY-corrected — 2,189 images · 2,677 boxes
 
 DOI: [10.57967/hf/10896](https://doi.org/10.57967/hf/10896)
