@@ -26,6 +26,24 @@ org:
 
 # Newest first. The order here is the order shown everywhere.
 datasets:
+  - id: KIT_BallScrew_Defects-corrected
+    emoji: "🔩"
+    domain_en: "Industrial — ball-screw surface inspection"
+    domain_zh: "工业 — 滚珠丝杠表面质检"
+    domain_short: "Industrial (ball screw)"
+    images: 21835
+    boxes: 0
+    classes: 3
+    format: "ImageFolder (classification)"
+    hf: https://huggingface.co/datasets/KeenForgeAI/KIT_BallScrew_Defects-corrected
+    ms: https://www.modelscope.ai/datasets/KeenForgeAI/KIT_BallScrew_Defects-corrected
+    description_en: "Ball-screw surface defect image classification, 3 classes (ImageFolder) — cleaned, re-indexed and split version of KIT-BS-recls (CC BY-SA 4.0)"
+    description_zh: "滚珠丝杠表面缺陷图像分类，3 类（ImageFolder）—— KIT-BS-recls 的清理、重编号与划分版（CC BY-SA 4.0）"
+    blurb_en: "Ball-screw surface defect image classification (pitting / contaminated / normal), 3 classes, ImageFolder layout, labels re-indexed 3/6/8→0/1/2. First classification dataset in the collection."
+    blurb_zh: "滚珠丝杠表面缺陷图像分类（点蚀 / 污染 / 正常），3 类，ImageFolder 布局，标签重编号 3/6/8→0/1/2。本合集首个分类数据集。"
+    summary_en: "Cleaned, re-indexed, split and standardized **image-classification** version of the **Tri-classified Ball Screw Surface Defects dataset (KIT-BS-recls)** (Xue, Zhang, Xie, Puchta & Fleischer, *Neurocomputing* 2025, DOI 10.1016/j.neucom.2025.131291; upstream [fenghsueh/Triclass-BSDefects](https://github.com/fenghsueh/Triclass-BSDefects); licensed **CC BY-SA 4.0**): the archive was converted to a folder-based classification layout (`images/<split>/<class>/`); the upstream labels, which were the **non-contiguous ids 3 / 6 / 8** (pitting / contaminated / normal), were **remapped to 0 / 1 / 2**; a seeded, class-stratified **70 / 15 / 15** split was added (upstream has none): **15,288 / 3,276 / 3,271**; near-identical images (identical 8×8-dHash and 32×32 pixel-MSE ≤ 1) were kept on one side of the split; filenames containing parentheses (`P(123).png`) were normalised; and `classes.txt`, `data.yaml` and `labels.csv` were generated. **All 21,835 images are byte-for-byte identical** to upstream. 3 classes: `pitting` (10,760), `contaminated` (7,523), `normal` (3,552). Task: image classification (one label per image, no bounding boxes)."
+    summary_zh: "**滚珠丝杠表面缺陷三分类数据集（KIT-BS-recls）**的清理、重编号、划分与标准化**图像分类**版（Xue、Zhang、Xie、Puchta 与 Fleischer，*Neurocomputing* 2025，DOI 10.1016/j.neucom.2025.131291；上游 [fenghsueh/Triclass-BSDefects](https://github.com/fenghsueh/Triclass-BSDefects)；采用 **CC BY-SA 4.0** 许可）：压缩包转换为基于文件夹的分类布局（`images/<split>/<class>/`）；上游标签为**不连续的 3 / 6 / 8**（pitting / contaminated / normal），已**重映射为 0 / 1 / 2**；新增固定种子、按类别分层的 **70 / 15 / 15** 划分（上游完全没有划分）：**15,288 / 3,276 / 3,271**；近重复图（8×8 dHash 相同且 32×32 像素 MSE ≤ 1）固定在同一划分内；含括号的文件名（`P(123).png`）已净化；并生成 `classes.txt`、`data.yaml` 与 `labels.csv`。**21,835 张图与上游逐字节一致**。3 类：`pitting`（10,760）、`contaminated`（7,523）、`normal`（3,552）。任务：图像分类（每图一标签，无边界框）。"
+
   - id: TrafficSigns_YOLO-corrected
     emoji: "🚦"
     domain_en: "Transport — traffic sign detection"

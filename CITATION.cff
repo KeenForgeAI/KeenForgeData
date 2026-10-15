@@ -32,6 +32,22 @@ date-released: "2026-09-20"
 references:
   - type: dataset
     title: >-
+      KIT_BallScrew_Defects-corrected: a cleaned classification release of the
+      Tri-classified Ball Screw Surface Defects dataset (KIT-BS-recls)
+    authors:
+      - name: "KeenForgeAI"
+    year: 2026
+    version: "1.0"
+    publisher:
+      name: "KeenForgeAI"
+    notes: >-
+      Derived from KIT-BS-recls (Xue, Zhang, Xie, Puchta & Fleischer,
+      Neurocomputing 2025, doi:10.1016/j.neucom.2025.131291), licensed
+      CC BY-SA 4.0; distributed under the same licence. Hugging Face DOI
+      pending. Curated by Lu Gan and Sam Li.
+
+  - type: dataset
+    title: >-
       TrafficSigns_YOLO-corrected: a leak-safe release of the Traffic Signs
       Dataset for YOLOv8-YOLOv11 benchmarking
     authors:
