@@ -37,6 +37,7 @@ datasets:
     format: "ImageFolder (classification)"
     hf: https://huggingface.co/datasets/KeenForgeAI/KIT_BallScrew_Defects-corrected
     ms: https://www.modelscope.ai/datasets/KeenForgeAI/KIT_BallScrew_Defects-corrected
+    doi: 10.57967/hf/11010
     description_en: "Ball-screw surface defect image classification, 3 classes (ImageFolder) — cleaned, re-indexed and split version of KIT-BS-recls (CC BY-SA 4.0)"
     description_zh: "滚珠丝杠表面缺陷图像分类，3 类（ImageFolder）—— KIT-BS-recls 的清理、重编号与划分版（CC BY-SA 4.0）"
     blurb_en: "Ball-screw surface defect image classification (pitting / contaminated / normal), 3 classes, ImageFolder layout, labels re-indexed 3/6/8→0/1/2. First classification dataset in the collection."

@@ -57,7 +57,7 @@ local-first, open-source annotation & training desktop tool (100% offline, MIT l
 Direct dataset links:
 
 <!-- GEN:LINKS -->
-- **KIT_BallScrew_Defects-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/KIT_BallScrew_Defects-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/KIT_BallScrew_Defects-corrected)
+- **KIT_BallScrew_Defects-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/KIT_BallScrew_Defects-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/KIT_BallScrew_Defects-corrected) · [DOI](https://doi.org/10.57967/hf/11010)
 - **TrafficSigns_YOLO-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/TrafficSigns_YOLO-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/TrafficSigns_YOLO-corrected) · [DOI](https://doi.org/10.57967/hf/10898)
 - **RoadCrack_DL_HY-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/RoadCrack_DL_HY-corrected) · [DOI](https://doi.org/10.57967/hf/10896)
 - **VisuCeram_500x500-corrected** — [Hugging Face](https://huggingface.co/datasets/KeenForgeAI/VisuCeram_500x500-corrected) · [ModelScope](https://www.modelscope.ai/datasets/KeenForgeAI/VisuCeram_500x500-corrected) · [DOI](https://doi.org/10.57967/hf/10884)
@@ -94,6 +94,8 @@ re-annotation, unless its own README says otherwise. Image pixels are never modi
 
 <!-- GEN:DETAILS -->
 #### 🔩 KIT_BallScrew_Defects-corrected — 21,835 images · 0 boxes
+
+DOI: [10.57967/hf/11010](https://doi.org/10.57967/hf/11010)
 
 Ball-screw surface defect image classification (pitting / contaminated / normal), 3 classes, ImageFolder layout, labels re-indexed 3/6/8→0/1/2. First classification dataset in the collection. Cleaned, re-indexed, split and standardized **image-classification** version of the **Tri-classified Ball Screw Surface Defects dataset (KIT-BS-recls)** (Xue, Zhang, Xie, Puchta & Fleischer, *Neurocomputing* 2025, DOI 10.1016/j.neucom.2025.131291; upstream [fenghsueh/Triclass-BSDefects](https://github.com/fenghsueh/Triclass-BSDefects); licensed **CC BY-SA 4.0**): the archive was converted to a folder-based classification layout (`images/<split>/<class>/`); the upstream labels, which were the **non-contiguous ids 3 / 6 / 8** (pitting / contaminated / normal), were **remapped to 0 / 1 / 2**; a seeded, class-stratified **70 / 15 / 15** split was added (upstream has none): **15,288 / 3,276 / 3,271**; near-identical images (identical 8×8-dHash and 32×32 pixel-MSE ≤ 1) were kept on one side of the split; filenames containing parentheses (`P(123).png`) were normalised; and `classes.txt`, `data.yaml` and `labels.csv` were generated. **All 21,835 images are byte-for-byte identical** to upstream. 3 classes: `pitting` (10,760), `contaminated` (7,523), `normal` (3,552). Task: image classification (one label per image, no bounding boxes).
 

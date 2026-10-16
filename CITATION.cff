@@ -43,8 +43,9 @@ references:
     notes: >-
       Derived from KIT-BS-recls (Xue, Zhang, Xie, Puchta & Fleischer,
       Neurocomputing 2025, doi:10.1016/j.neucom.2025.131291), licensed
-      CC BY-SA 4.0; distributed under the same licence. Hugging Face DOI
-      pending. Curated by Lu Gan and Sam Li.
+      CC BY-SA 4.0; distributed under the same licence. Curated by Lu Gan and
+      Sam Li.
+    doi: "10.57967/hf/11010"
 
   - type: dataset
     title: >-
